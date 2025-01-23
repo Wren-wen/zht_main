@@ -1,0 +1,136 @@
+{
+    "id": 1,
+    "title": "ZHT KEEL四轴飞行器长续航RTK定位工业无人机用于测绘和检测",
+    "title_en": "ZHT KEEL Quadcopter Long EnduranceRTK Positioning industrial Drone ForMapping And inspection",
+    "video": "202412.12测试视频.mp4",
+    "table": "e33fba17e08feb2c20b7bd0ccda587c.png",
+    "timestamp": 1737487770843,
+    "path":
+    [
+        {
+            "id": 1,
+            "zh": "dasf",
+            "en": "dafsa"
+        },
+        {
+            "id": 2,
+            "zh": "asdfa",
+            "en": "sfas"
+        },
+        {
+            "id": 3,
+            "zh": "asdf",
+            "en": "asdf"
+        },
+        {
+            "id": 8,
+            "zh": "asdf",
+            "en": "adf"
+        }
+    ],
+    "tip":
+    [
+        {
+            "zh": "最大载重量30KG",
+            "en": "Max. Loading Capacity 30KG"
+        },
+        {
+            "zh": "双电源系统，独家兼容",
+            "en": "Dual Power System,Exclusive Compatibility"
+        },
+        {
+            "zh": " 冗余电池系统",
+            "en": "Redundant Battery System"
+        },
+        {
+            "zh": "多有效载荷兼容平台",
+            "en": "Multi-payload compatible Platform"
+        }
+    ],
+    "image":
+    [
+        {
+            "src": "DSC08228-修-scaled.jpg"
+        },
+        {
+            "src": "DSC08088-修-scaled.jpg"
+        },
+        {
+            "src": "DSC08089-修-scaled.jpg"
+        },
+        {
+            "src": "DSC08091-修-1-scaled.jpg"
+        },
+        {
+            "src": "DSC08106-scaled.jpg"
+        },
+        {
+            "src": "X9plus-2H0A7095-scaled.jpg"
+        }
+    ],
+    "frame":
+    [
+        {
+            "type": 3,
+            "src": "02-低温测试海报-1157x1536.jpg",
+            "href": ""
+        },
+        {
+            "type": 4,
+            "src": "202412.12测试视频.mp4"
+        },
+        {
+            "type": 3,
+            "src": "asdf",
+            "href": ""
+        },
+        {
+            "type": 2,
+            "height": 30
+        },
+        {
+            "type": 1,
+            "txt": "推荐动力系统",
+            "txt_en": "words",
+            "color": "#000",
+            "fontSize": 34,
+            "fontWeight": "normal",
+            "decoration": 2
+        },
+        {
+            "type": 2,
+            "height": 18
+        },
+        {
+            "type": 1,
+            "txt": "强续航，强劲动力",
+            "txt_en": "强续航，强劲动力",
+            "color": "rgba(135, 135, 135, 1)",
+            "fontSize": 21,
+            "fontWeight": "normal",
+            "decoration": 2
+        },
+        {
+            "type": 2,
+            "height": 18
+        }
+    ],
+    "recommend":
+    [
+        {
+            "src": "03-电池.jpg",
+            "zh": "电池",
+            "en": "asdfsadf"
+        },
+        {
+            "src": "asdf",
+            "zh": "fadasf",
+            "en": "afa",
+            "href": "www.baidu"
+        }
+    ],
+    "cover":
+    {
+        "src": "DSC08228-修-scaled.jpg"
+    }
+}

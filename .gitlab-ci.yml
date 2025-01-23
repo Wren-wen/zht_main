@@ -1,0 +1,19 @@
+image: node:lts
+
+pages:
+  cache:
+    paths:
+      - node_modules/
+  variables:
+    FF_USE_FASTZIP: "true" # 是一个功能标志，用于启用对 Range 请求的支持。
+    ARTIFACT_COMPRESSION_LEVEL: "fastest" # 保生成的压缩文件支持 Range 请求
+  script:
+    - npm install
+    - npx vite build
+    - cp -r dist/* public
+  artifacts:  # 制品 /ˈɑːtɪfækt/
+    paths:
+      - public
+  only:
+    - main
+
