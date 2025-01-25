@@ -31,10 +31,7 @@ const urls = [
     color: var(--black);
     color: rgb(59, 59, 59);
     font-weight: bold;
-    /* margin: 30px 0; */
-    /* padding: 10px 0; */
-    margin-top: 10px;
-    height: 100px;
+    /* margin-top: 10px; */
     height: 180px;
     padding: 0 28px;
 

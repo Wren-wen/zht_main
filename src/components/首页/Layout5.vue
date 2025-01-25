@@ -26,7 +26,7 @@ import { ref, reactive, onMounted, } from 'vue'
 .Layout5 {
     height: 950px;
     width: 100%;
-    margin: 80px 0;
+    margin: 180px 0 0 0;
     position: relative;
 }
 

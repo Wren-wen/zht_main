@@ -75,6 +75,7 @@ declare module '@vue/runtime-core' {
     Title1: typeof import('./src/components/首页/Title1.vue')['default']
     Title2: typeof import('./src/components/首页/Title2.vue')['default']
     Title3: typeof import('./src/components/首页/Title3.vue')['default']
+    Title4: typeof import('./src/components/首页/Title4.vue')['default']
   }
 }
 

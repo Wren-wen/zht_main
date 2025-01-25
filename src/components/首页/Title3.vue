@@ -2,7 +2,7 @@
     <div class="Title3">
         <div class="left">
             <div v-if="0" class="icon iconfont icon-news"></div>
-            <lan v-if="0" en="NEWS" zh="新闻" />
+            <lan en="NEWS" zh="新闻" />
         </div>
         <div class="right">
             <button0>
@@ -33,7 +33,6 @@ const urls = [
     font-weight: bold;
     /* margin: 30px 0; */
     /* padding: 10px 0; */
-    margin-top: 10px;
     height: 180px;
     padding: 0 28px;
 
@@ -52,6 +51,9 @@ const urls = [
 .left {
     display: flex;
     align-items: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .right {
     display: flex;

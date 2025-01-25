@@ -1,17 +1,5 @@
 <template>
     <div :class="{Layout7:1, nose:1}">
-        <div :class="{flow:1, stop:stop[0]}" @mouseenter="stop[0]=1" @mouseleave="stop[0]=0">
-            <div class="bar"></div>
-            <div class="content">
-                <div class="item pointer" v-for="u in url0">
-                    <img :src="u">
-                </div>
-                <div class="item pointer" v-for="u in url0">
-                    <img :src="u">
-                </div>
-            </div>
-            <!-- <div class="bar"></div> -->
-        </div>
         <div :class="{flow:1,reverse:1, stop:stop[1]}" @mouseenter="stop[1]=1" @mouseleave="stop[1]=0">
             <div class="bar"></div>
             <div class="content">
