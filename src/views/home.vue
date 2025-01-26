@@ -19,6 +19,7 @@
         <layout5></layout5>
         <title4></title4>
         <layout7></layout7>
+        <footer-bar></footer-bar>
     </div>
 </template>
 

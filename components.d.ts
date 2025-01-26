@@ -43,6 +43,7 @@ declare module '@vue/runtime-core' {
     ElRadioButton: typeof import('element-plus/es')['ElRadioButton']
     ElRadioGroup: typeof import('element-plus/es')['ElRadioGroup']
     ElSwitch: typeof import('element-plus/es')['ElSwitch']
+    FooterBar: typeof import('./src/components/导航栏/FooterBar.vue')['default']
     Frame: typeof import('./src/components/组件Frame/Frame.vue')['default']
     FrameContainer: typeof import('./src/components/组件Frame/FrameContainer.vue')['default']
     Lan: typeof import('./src/components/中英切换组件/Lan.vue')['default']
