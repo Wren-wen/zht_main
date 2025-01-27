@@ -1,12 +1,12 @@
 <template>
-    <div ref="scrollbox" class="scrollbox">
+    <el-scrollbar ref="scrollbox" class="scrollbox">
         <router-view v-slot="{ Component }">
             <nav-bar v-if="!configuration.on"></nav-bar>
             <transition name="fade">
                 <component class="components" :is="Component" />
             </transition>
         </router-view>
-    </div>
+    </el-scrollbar>
 </template>
 
 <script setup>
@@ -14,6 +14,7 @@ import { ref, reactive, onMounted, watch, provide } from 'vue'
 import pubuse from '@/utils/pub-use'
 import { useRoute, useRouter } from "vue-router"
 import useScan from '@/hooks/useScan'
+import { ElScrollbar } from 'element-plus';
 import { getIndex as getArticleIndex } from '@/api/configuration/article'
 import { getIndex as getPictureIndex } from '@/api/configuration/picture'
 import { getIndex as getProductIndex } from '@/api/configuration/product'

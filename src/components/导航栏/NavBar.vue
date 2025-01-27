@@ -42,10 +42,18 @@
                 </div>
                 <div class="navright flex">
                     <searcher></searcher>
-                    <div @click="switchLang" class="flex enzh nose pointer">
-                        <div class="iconfont icon-enzh"></div>
-                        <div class="text-enzh">
-                            <lan en="中文" zh="English" />
+                    <div class="flex enzh nose pointer">
+                        <div class="enzh-icon">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-diqiuwangluo"></use>
+                            </svg>
+                        </div>
+                        <div class="text-enzh en" @click="switchLang('EN')">
+                            <span>EN</span>
+                        </div>
+                        <div class="sep-line">&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+                        <div class="text-enzh zh" style="marginLeft: 0;" @click="switchLang('CN')">
+                            <span>CN</span>
                         </div>
                     </div>
                 </div>
@@ -70,24 +78,33 @@
 </template>
 
 <script setup>
-import { ref, reactive, onMounted, inject, watchEffect } from 'vue'
+import { ref, reactive, onMounted, inject, watch, watchEffect } from 'vue'
 import { useRoute, useRouter } from "vue-router"
+
+const activeColor = '#ff1215';
+const inactiveColor = '#ffffff';
 
 const ms = reactive({})
 const nav_show = ref(false)
+const enFontColor = ref(activeColor)
+const zhFontColor = ref(inactiveColor)
 
 const route = useRoute()
 const router = useRouter()
 const isZh = inject('isZh')
-const switchLang = () => {
-    if (isZh.value) {
-        // 将当前路由的query参数lang改为en
-        router.push({ query: { ...route.query, lang: 'en' } })
-    } else {
-        // 将当前路由的query参数lang改为zh
-        router.push({ query: { ...route.query, lang: 'zh' } })
-    }
 
+const switchLang = (to) => {
+    switch (to) {
+        case 'EN':
+            if (isZh.value) 
+                router.push({ query: { ...route.query, lang: 'en' } });
+            break;
+    
+        case 'CN':
+            if (!isZh.value)
+                router.push({ query: { ...route.query, lang: 'zh' } });
+            break;
+    }
 }
 
 const scroll_dirct = inject('scroll_dirct')
@@ -98,9 +115,18 @@ watchEffect(() => {
         nav_show.value = true
     }
 })
+watch(isZh, (v) => {
+    if (v) {
+        enFontColor.value = inactiveColor;
+        zhFontColor.value = activeColor;
+    } else {
+        enFontColor.value = activeColor;
+        zhFontColor.value = inactiveColor;
+    }
+})
 </script>
 
-<style scoped>
+<style style="less" scoped>
 .NavBar {
     z-index: 99;
     position: sticky;
@@ -108,10 +134,10 @@ watchEffect(() => {
     width: 100%;
     height: 100px;
     /* background-color: var(--black); */
-    background-color: rgba(0, 0, 0, 0.51);
+    background-color: rgba(0, 0, 0, 1);
     /* background-image: linear-gradient(to bottom, var(--hover), var(--black)); */
 
-    --bgo: .8;
+    --bgo: 1;
     transition: .23s;
     font-size: 20px;
 }
@@ -185,8 +211,13 @@ watchEffect(() => {
     /* color: var(--red); */
 }
 
-.icon-enzh {
-    font-size: 24px;
+.enzh-icon {
+    height: 26px;
+    width: 26px;
+    .icon {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 .text-enzh {
@@ -194,4 +225,12 @@ watchEffect(() => {
     margin-left: 10px;
     white-space: nowrap;
 }
+
+.en {
+    color: v-bind(enFontColor);
+}
+.zh {
+    color: v-bind(zhFontColor);
+}
+
 </style>

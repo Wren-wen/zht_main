@@ -2,7 +2,7 @@
     <div class="Pop_a">
         <div class="container">
             <div @click="goProduct(1)" class="item">
-                <div class="title"><lan en="KEEL" zh="KEEL" /></div>
+                <div class="title first-title"><lan en="KEEL" zh="KEEL" /></div>
                 <div class="tip"><lan en="模块化设计, 经典畅销" zh="模块化设计, 经典畅销" /></div>
                 <img src="@/assets/比例图/1.png" alt="">
             </div>
@@ -34,7 +34,7 @@ const goProduct = (id) => {
 
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 .Pop_a {
     padding: 0px 140px;
     padding-bottom: 50px;
@@ -65,8 +65,21 @@ const goProduct = (id) => {
     display: flex;
     align-items: center;
 }
+.first-title {
+    position: relative;
+}
+.first-title::after {
+    content: "";
+    position: absolute; 
+    left: -150px;
+    overflow-x: hidden;
+    bottom: 0; 
+    width: 100vw;
+    height: 3px; 
+    background-color: #f4f4f4;
+}
 .tip{
-    color: #898989;
+    color: black;
     font-size: 19px;
     height: 100px;
     display: flex;

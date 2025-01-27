@@ -40,6 +40,5 @@ import { ref, onMounted, inject } from 'vue'
     --gap: 15px;
     /* overflow: hidden; */
     position: relative;
-
 }
 </style>

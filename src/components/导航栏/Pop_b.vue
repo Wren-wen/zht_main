@@ -6,13 +6,13 @@
                     <h1>
                         <lan en="KEEL系列" zh="KEEL系列" />
                     </h1>
-                    <h3>
+                    <span class="tip">
                         <lan en="10-100公斤级动力方案" zh="10-100公斤级动力方案" />
-                    </h3>
+                    </span>
                 </div>
-                <h3>
+                <span class="tip">
                     <lan en="模块化设计 · 一机应百变" zh="模块化设计 · 一机应百变" />
-                </h3>
+                </span>
             </div>
             <div class="list">
                 <div class="item one">
@@ -67,9 +67,9 @@
                 <h1>
                     <lan en="NAGA系列" zh="NAGA系列" />
                 </h1>
-                <h3 class="two">
+                <span class="tip two">
                     <lan en="3-8公斤级动力方案" zh="3-8公斤级动力方案" />
-                </h3>
+                </span>
             </div>
             <div class="item one">
                 <div class="bar two">
@@ -94,10 +94,9 @@
 <script setup>
 import { ref, reactive, onMounted, } from 'vue'
 
-
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 .Pop_b {
     height: 800px;
     padding: 0px 0px 40px 134px;
@@ -137,6 +136,20 @@ import { ref, reactive, onMounted, } from 'vue'
     margin-right: 30px;
 }
 
+.bar.one {
+    position: relative;
+    ::after {
+        content: "";
+        position: absolute; 
+        left: -134px;
+        overflow-x: hidden;
+        bottom: 0; 
+        width: 100vw;
+        height: 3px; 
+        background-color: #f4f4f4;
+    }
+}
+
 .bar.two {
     /* margin-bottom: 20px; */
 }
@@ -165,14 +178,13 @@ h2 {
     font-size: 19px;
 }
 
-h3 {
-    font-size: 20px;
-    font-weight: light;
-    color: #9a9a9a;
-}
-
 h3.two {
     font-size: 20px;
     /* width: 110px; */
+}
+.tip {
+    font-size: 20px;
+    font-weight: 1;
+    color: #9a9a9a;
 }
 </style>

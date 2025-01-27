@@ -4,7 +4,7 @@ export default function useScan(scrollbox:any) {
     let lastValue = 0
     let scroll_dirct = ref('up')
     onMounted(()=>{
-        scrollbox.value.addEventListener('scroll', () => {
+        scrollbox.value.$el.querySelector('.el-scrollbar__wrap').addEventListener('scroll', () => {
             const top = scrollbox.value.scrollTop
             if (top > lastValue) {
                 scroll_dirct.value = 'down'

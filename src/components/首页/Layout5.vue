@@ -12,6 +12,12 @@
                     <h3><lan en="模块化理念" zh="模块化理念" /></h3>
                 </div>
             </div>
+            <div class="btn">
+                <div>
+                    <lan en="公司介绍" zh="公司介绍" />
+                </div>
+                <div class="triangle">▶</div>
+            </div>
         </div>
     </div>
 </template>
@@ -81,5 +87,23 @@ h3{
     width: 100px;
     height: 100px;
     margin-bottom: 10px
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: #ff1215;
+    color: #fffeff;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 25px;
+    border-radius: 12px;
+    padding: 0 14px;
+    cursor: pointer;
+    margin-top: 300px;
+    .triangle {
+        font-size: 12px;
+        margin-left: 4px;
+    }
 }
 </style>
