@@ -1,0 +1,1 @@
+import{_ as e,o as _,c as t}from"./index.75d2230f.js";const s={class:"question"},o={__name:"question",setup(a){return(c,n)=>(_(),t("div",s," question "))}};var u=e(o,[["__scopeId","data-v-4ce37e7a"]]);export{u as default};

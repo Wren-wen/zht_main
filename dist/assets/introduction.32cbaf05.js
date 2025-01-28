@@ -1,0 +1,1 @@
+import{_ as t,o,c as _}from"./index.75d2230f.js";const e={class:"introduction"},n={__name:"introduction",setup(c){return(r,s)=>(o(),_("div",e," introduction "))}};var i=t(n,[["__scopeId","data-v-73622886"]]);export{i as default};

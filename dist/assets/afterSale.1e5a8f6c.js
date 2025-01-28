@@ -1,0 +1,1 @@
+import{_ as e,o as a,c as _}from"./index.75d2230f.js";const t={class:"afterSale"},r={__name:"afterSale",setup(s){return(c,o)=>(a(),_("div",t," afterSale "))}};var f=e(r,[["__scopeId","data-v-6fd3ac60"]]);export{f as default};
