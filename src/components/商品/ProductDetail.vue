@@ -83,15 +83,22 @@
             </popup-any>
         </div>
     </div>
+    <div class="return-top" @click="scrollToTop">
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-top"></use>
+        </svg>
+    </div>
 </template>
 
 <script setup>
 import { ref, reactive, onMounted, } from 'vue'
 import formatDate from '@/utils/time/time'
 import { useRoute, useRouter } from "vue-router"
+import { useStore } from 'vuex'
 
 const route = useRoute()
 const router = useRouter()
+const store = useStore()
 
 const props = defineProps(['product'])
 
@@ -110,6 +117,10 @@ const goPath = (id) => {
     }
 }
 
+const scrollToTop = () => {
+    store.commit('triggerScrollToTop');
+}
+
 const recommendidx = ref(0)
 
 const videopop = ref(false)
@@ -118,7 +129,7 @@ const parampop = ref(false)
 
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 .header {
     width: 1920px;
     max-width: 100%;
@@ -314,5 +325,24 @@ const parampop = ref(false)
     height: auto;
     max-width: 66vw;
     max-height: 80vh;
+}
+
+.return-top {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 85%;
+    left: 95%;
+    background-color: #fff;
+    border-radius: 100%;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    .icon {
+        width: 75%;
+        height: 75%;
+        position: relative;
+        left: 12.5%;
+        top: 12.5%;
+    }
 }
 </style>

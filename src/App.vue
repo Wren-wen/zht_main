@@ -13,6 +13,7 @@
 import { ref, reactive, onMounted, watch, provide } from 'vue'
 import pubuse from '@/utils/pub-use'
 import { useRoute, useRouter } from "vue-router"
+import { useStore } from 'vuex'
 import useScan from '@/hooks/useScan'
 import { ElScrollbar } from 'element-plus';
 import { getIndex as getArticleIndex } from '@/api/configuration/article'
@@ -21,6 +22,7 @@ import { getIndex as getProductIndex } from '@/api/configuration/product'
 
 
 const route = useRoute()
+const store = useStore()
 
 
 const scrollbox = ref(null)
@@ -81,6 +83,24 @@ provide('isZh', isZh)
 provide('scroll_dirct', scroll_dirct)
 provide('configuration', configuration)
 provide('INDEX', INDEX)
+
+watch(() => store.state.scrollToTop, (newVal) => {
+    if (newVal) {
+        const innerScroll = scrollbox.value.$el.querySelector('.el-scrollbar__wrap');
+        const scrollDur = 300;
+        const scrollStep = -innerScroll.scrollTop / (scrollDur / 15);
+
+        const scrollInterval = setInterval(() => {
+            if (innerScroll.scrollTop !== 0) {
+                innerScroll.scrollBy(0, scrollStep);
+            } else {
+                clearInterval(scrollInterval);
+            }
+        }, 15);
+        
+        store.commit('triggerScrollToTop');
+    }
+});
 </script>
 
 

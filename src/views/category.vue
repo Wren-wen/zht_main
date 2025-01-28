@@ -11,6 +11,9 @@
                 </div>
             </div>
         </div>
+        <div class="banner">
+
+        </div>
         <div class="container">
             <div class="content">
                 <div class="item" v-for="item in data">
@@ -186,7 +189,7 @@ onUnmounted(() => {
 
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 .category {
     position: relative;
     width: 100%;
@@ -206,6 +209,12 @@ onUnmounted(() => {
     position: sticky;
     top: 0;
     z-index: 1;
+}
+
+.banner {
+    width: 100%;
+    height: 420px;
+    background-color: #e6e6e6;
 }
 
 .path {
@@ -241,6 +250,7 @@ onUnmounted(() => {
     width: calc(calc(100% - var(--gap)*4) / 4);
     height: 480px;
     margin: calc(var(--gap)/2);
+    margin-top: 100px;
     background-color: #fff;
     display: flex;
     flex-direction: column;

@@ -3,7 +3,8 @@ import { createStore } from 'vuex';
 const store = createStore({
   state() {
     return {
-      count: 0
+      count: 0,
+      scrollToTop: false,
     }
   },
   getters: {
@@ -17,6 +18,9 @@ const store = createStore({
     },
     decrement(state) {
       state.count--;
+    },
+    triggerScrollToTop(state) {
+        state.scrollToTop = !state.scrollToTop;
     }
   },
   actions: {
