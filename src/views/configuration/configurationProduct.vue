@@ -268,6 +268,7 @@ provide('opt', opt)
     display: flex;
     height: 100%;
     width: 100%;
+    height: 100vh;
     background-color: #fffae8;
 }
 
