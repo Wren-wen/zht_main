@@ -17,12 +17,44 @@
                 <div :class="{ item: 1, active: false }">
                     <img class="itemimg" :src="urls[1]" alt="">
                 </div> -->
-                <div :class="{ item: 1, active: idx == index - 1 }" v-for="(item, index) in data">
+                <div :class="{ item: 1, active: false }">
+                    <img class="itemimg" :src="`configuration/image_bed/${data[data.length - 2]?.cover}`" alt="">
+                    <div class="red-line"></div>
+                    <div class="title-wrapper">
+                        <span v-if="!isZh">{{ data[data.length - 2]?.title_en }}</span>
+                        <span v-else>{{ data[data.length - 2]?.title }}</span>
+                    </div>
+                </div>
+                <div :class="{ item: 1, active: 0 == idx }">
+                    <img class="itemimg" :src="`configuration/image_bed/${data[data.length - 1]?.cover}`" alt="">
+                    <div class="red-line"></div>
+                    <div class="title-wrapper">
+                        <span v-if="!isZh">{{ data[data.length - 2]?.title_en }}</span>
+                        <span v-else>{{ data[data.length - 2]?.title }}</span>
+                    </div>
+                </div>
+                <div :class="{ item: 1, active: idx == index + 1 }" v-for="(item, index) in data">
                     <img class="itemimg" :src="`configuration/image_bed/${item?.cover}`" alt="">
                     <div class="red-line"></div>
                     <div class="title-wrapper">
                         <span v-if="!isZh">{{ item?.title_en }}</span>
                         <span v-else>{{ item?.title }}</span>
+                    </div>
+                </div>
+                <div :class="{ item: 1, active: data.length + 1 == idx }">
+                    <img class="itemimg" :src="`configuration/image_bed/${data[0]?.cover}`" alt="">
+                    <div class="red-line"></div>
+                    <div class="title-wrapper">
+                        <span v-if="!isZh">{{ data[0]?.title_en }}</span>
+                        <span v-else>{{ data[0]?.title }}</span>
+                    </div>
+                </div>
+                <div :class="{ item: 1, active: false }">
+                    <img class="itemimg" :src="`configuration/image_bed/${data[1]?.cover}`" alt="">
+                    <div class="red-line"></div>
+                    <div class="title-wrapper">
+                        <span v-if="!isZh">{{ data[1]?.title_en }}</span>
+                        <span v-else>{{ data[1]?.title }}</span>
                     </div>
                 </div>
             </div>
