@@ -5,6 +5,7 @@ import { ENV } from "@/utils/enums"
 import newsRouter from "./news"
 import fileRouter from "./file"
 import imageRouter from "./image"
+import indicesRouter from "./indices"
 
 const _app = express()
 
@@ -33,6 +34,7 @@ _app.use('/main', express.static('static', {
 _app.use('/news', newsRouter)
 _app.use('/file', fileRouter)
 _app.use('/image', imageRouter)
+_app.use('/indices', indicesRouter)
 
 export {
     _app as app
