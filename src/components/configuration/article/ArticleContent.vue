@@ -131,7 +131,6 @@ onMounted(() => {
     if (!article_edit.value?.id) {
         getArticle(opt.id_selected).then(res => {
             article_edit.value = res
-
         }).catch(e => {
             article_edit.value = opt.index_init[opt.id_selected]
             if (!article_edit.value?.id) {
@@ -155,7 +154,6 @@ watch(article_edit, (to, from) => {
         }
     }
     Object.assign(article_edit.value, params)
-    
 })
 </script>
 

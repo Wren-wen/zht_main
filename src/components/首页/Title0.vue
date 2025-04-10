@@ -16,6 +16,8 @@
 import { ref, reactive, onMounted, } from 'vue'
 import pubuse from '@/utils/pub-use'
 
+defineProps(['color']);
+
 
 const urls = [
     pubuse('无人机/wurenji.png'),
@@ -29,11 +31,11 @@ const urls = [
 .Title0 {
     font-size: 46px;
     color: var(--black);
-    color: rgb(59, 59, 59);
+    color: v-bind(color);
     font-weight: bold;
-    /* margin-top: 10px; */
-    height: 180px;
+    margin-top: 40px;
     padding: 0 28px;
+    letter-spacing: 2.5px;
 
 
     display: flex;
@@ -42,8 +44,6 @@ const urls = [
     justify-content: center;
     position: sticky;
     /* top: 0px; */
-    background-color: rgb(199, 64, 64);
-    background-color: rgba(255, 255, 255, 0.485);
     /* box-shadow: 0 -3px 6px rgba(0, 0, 0, .08); */
     backdrop-filter: blur(10px);
     overflow: hidden;

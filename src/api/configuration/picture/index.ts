@@ -7,16 +7,25 @@ export function getIndex<T>(){
     })
 }
 
-export function getArticle<T>(id:any){
+export function getPicture<T>(id:any){
     return http.get<T>({
         url:`/configuration/picture/${id}.json`,
         responseType:"json"
     })
 }
 
-export function getItem<T>(id:any){
+export function getIndexFromBackend<T>() {
     return http.get<T>({
-        url:`/configuration/picture/${id}.json`,
+        baseURL: 'http://localhost:5556',
+        url: '/main/configuration/picture_index.json',
+        responseType: 'json'
+    })
+}
+
+export function getPictureFromBackend<T>(id:any){
+    return http.get<T>({
+        baseURL: 'http://localhost:5556',
+        url:`/main/configuration/picture/${id}.json`,
         responseType:"json"
     })
 }

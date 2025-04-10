@@ -12,32 +12,32 @@
                         'nav-item': true,
                         'nav-item-hover': ms.pop_a?.delay_ox
                     }" href="#" @mouseenter="ms.a = 1" @mouseleave="ms.a = 0">
-                        <lan en="无人机机架" zh="无人机机架" />
+                        <lan en="Drone Frame" zh="无人机机架" />
                     </div>
                     <div :class="{
                         'nav-item': true,
                         'nav-item-hover': ms.pop_b?.delay_ox
                     }" href="#" @mouseenter="ms.b = 1" @mouseleave="ms.b = 0">
-                        <lan en="无人机动力方案" zh="无人机动力方案" />
+                        <lan en="Drone System" zh="无人机动力方案" />
                     </div>
 
                     <div :class="{
                         'nav-item': true,
                         'nav-item-hover': ms.pop_c?.delay_ox
                     }" href="#" @mouseenter="ms.c = 1" @mouseleave="ms.c = 0">
-                        <lan en="配套专区" zh="配套专区" />
+                        <lan en="Accessories" zh="配套专区" />
                     </div>
                     <div :class="{
                         'nav-item': true,
                         'nav-item-hover': ms.pop_d?.delay_ox
                     }" href="#" :ref="e => ms.navi_d = e" @mouseenter="ms.d = 1" @mouseleave="ms.d = 0">
-                        <lan en="服务与支持" zh="服务与支持" />
+                        <lan en="Service and Support" zh="服务与支持" />
                     </div>
                     <div :class="{
                         'nav-item': true,
                         'nav-item-hover': ms.pop_e?.delay_ox
                     }" href="#" :ref="e => ms.navi_e = e" @mouseenter="ms.e = 1" @mouseleave="ms.e = 0">
-                        <lan en="关于我们" zh="关于我们" />
+                        <lan en="About Us" zh="关于我们" />
                     </div>
                 </div>
                 <div class="navright flex">

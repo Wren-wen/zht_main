@@ -2,19 +2,19 @@
     <div class="Pop_a">
         <div class="container">
             <div @click="goProduct(1)" class="item">
-                <div class="title first-title"><lan en="KEEL" zh="KEEL" /></div>
-                <div class="tip"><lan en="模块化设计, 经典畅销" zh="模块化设计, 经典畅销" /></div>
-                <img src="@/assets/比例图/1.png" alt="">
+                <div class="title first-title"><lan en="KEEL Frame" zh="KEEL 机架" /></div>
+                <div class="tip"><lan en="Modular design, classic and popular" zh="模块化设计, 经典畅销" /></div>
+                <img src="@/assets/目录/frame/KEEL.jpg" alt="">
             </div>
             <div class="item mid">
-                <div class="title"><lan en="KEEL MINI" zh="KEEL MINI" /></div>
-                <div class="tip"><lan en="超轻超小巧, 您的DIY首选" zh="超轻超小巧, 您的DIY首选" /></div>
-                <img src="@/assets/比例图/1.png" alt="">
+                <div class="title"><lan en="KEEL MINI Frame" zh="KEEL MINI 机架" /></div>
+                <div class="tip"><lan en="Ultra-light and compact, your first choice for DIY" zh="超轻超小巧, 您的DIY首选" /></div>
+                <img src="@/assets/目录/frame/KEEL_MINI.jpg" alt="">
             </div>
             <div class="item">
-                <div class="title"><lan en="KEEL PLUS" zh="KEEL PLUS" /></div>
-                <div class="tip"><lan en="30公斤重载先锋" zh="30公斤重载先锋" /></div>
-                <img src="@/assets/比例图/1.png" alt="">
+                <div class="title"><lan en="KEEL PLUS Frame" zh="KEEL PLUS 机架" /></div>
+                <div class="tip"><lan en="30kg heavy payload pioneer" zh="30公斤重载先锋" /></div>
+                <img src="@/assets/目录/frame/KEEL_PLUS.jpg" alt="">
             </div>
         </div>
     </div>
@@ -37,11 +37,12 @@ const goProduct = (id) => {
 <style lang="less" scoped>
 .Pop_a {
     padding: 0px 140px;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
     --margin: 30px;
 
     height: 600px;
     width: 100%;
+    background-color: #dcdcdc;
 }
 .container{
     width: 100%;
@@ -61,9 +62,10 @@ const goProduct = (id) => {
 .title{
     font-size: 20px;
     color: black;
-    height: 100px;
+    height: 80px;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 .first-title {
     position: relative;
@@ -76,17 +78,20 @@ const goProduct = (id) => {
     bottom: 0; 
     width: 100vw;
     height: 3px; 
-    background-color: #f4f4f4;
+    background-color: #bebebe;
 }
 .tip{
     color: black;
     font-size: 19px;
-    height: 100px;
+    height: 60px;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 img{
     width: 100%;
     /* height: 600px; */
+    border-radius: 12px;
+    cursor: pointer;
 }
 </style>

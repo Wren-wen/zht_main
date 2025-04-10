@@ -1,6 +1,6 @@
 <template>
     <div class="Title4">
-        <lan en="集成化案例" zh="集成化案例" />
+        <lan en="Integration Case" zh="集成化案例" />
     </div>
 </template>
 

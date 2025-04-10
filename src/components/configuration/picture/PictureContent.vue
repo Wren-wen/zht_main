@@ -83,7 +83,7 @@
 
 <script setup>
 import { ref, toRaw, onMounted, onUnmounted, inject, toRef, watch, computed } from 'vue'
-import { getIndex, getArticle } from '@/api/configuration/picture'
+import { getIndex, getPicture } from '@/api/configuration/picture'
 import download_json from '@/hooks/configuration/download_json'
 
 const opt = inject('opt')
@@ -124,7 +124,7 @@ onMounted(() => {
     // console.log(article_edit,info_article_edit);
 
     if (!article_edit.value?.id) {
-        getArticle(opt.id_selected).then(res => {
+        getPicture(opt.id_selected).then(res => {
             article_edit.value = res
 
         }).catch(e => {

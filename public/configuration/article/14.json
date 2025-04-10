@@ -1,0 +1,396 @@
+{
+  "id": 14,
+  "cover": "company_news/cover/tu 2-KEEL Mini lightweight design.jpg",
+  "title": "KEEL MINI | 平稳飞行，媲美重型FPV",
+  "title_en": "KEEL MINI | Smooth Flight, Comparable to Heavy-Duty FPV",
+  "timestamp": "2024-10-09T03:51:18.000Z",
+  "tags": {
+    "1": {
+      "zh": "公司新闻",
+      "en": "company news"
+    }
+  },
+  "frame": [
+    {
+      "type": 2,
+      "height": 20
+    },
+    {
+      "type": 1,
+      "txt": "KEEL Mini是由中航通创新独立研发和生产的小型四旋翼无人机，延续了模块化设计理念，使所有组件能够快速组装和拆卸，单人最快可在60秒内完成部署。与同类产品相比，KEEL Mini 更小、更轻，且具有更高的载重能力，支持多种载荷。它非常适合用于自主巡检、编队任务、靶机训练、教育DIY项目等。",
+      "txt_en": "KEEL Mini is an independently developed and produced small quadcopter by ZHT Aero. It continues the modular design concept, allowing for quick assembly and disassembly of all components. A single person can deploy it in as fast as 60 seconds. Smaller, lighter, and with a higher payload capacity compared to others in its class, it supports various payloads. It is ideal for autonomous inspections, formation tasks, target drone training, educational DIY projects, and more.",
+      "color": "#000",
+      "fontSize": 22,
+      "fontWeight": "normal",
+      "decoration": 0
+    },
+    {
+      "type": 2,
+      "height": 18
+    },
+    {
+      "type": 3,
+      "src": "company_news/tu 1-.The coexistence oflightweight design and high rigidity has always been our pursuit.jpg",
+      "href": ""
+    },
+    {
+      "type": 2,
+      "height": 18
+    },
+    {
+      "type": 1,
+      "txt": "KEEL Mini轻量化设计",
+      "txt_en": "KEEL Mini Lightweight Design",
+      "color": "#000",
+      "fontSize": 22,
+      "fontWeight": "bold",
+      "decoration": 2
+    },
+    {
+      "type": 1,
+      "txt": "在机身臂架和主碳管等关键部位，KEEL Mini 采用高强度T800级12K碳纤维和航空级铝材，大幅减轻了整机重量，同时保持了优异的材料强度和高刚性。这些特性使 KEEL Mini 具有更大的载重能力和更强的飞行稳定性。空机重量仅为3.5公斤（不含电池），可有效减少结构疲劳，单人即可单手轻松提起。",
+      "txt_en": "Especially in key components such as the arms and main carbon tube of the body, we use high-strength T800-grade 12K carbon fiber along with aerospace-grade aluminum. This significantly reduces the overall weight of the drone while maintaining excellent material strength and high rigidity. These features give KEEL Mini greater payload capacity and enhanced flight stability. With an unloaded weight of just 3.5kg (excluding the battery), it minimizes structural fatigue and can be effortlessly lifted by a single person with one hand.",
+      "color": "#000",
+      "fontSize": 22,
+      "fontWeight": "normal",
+      "decoration": 0
+    },
+    {
+      "type": 2,
+      "height": 18
+    },
+    {
+      "type": 3,
+      "src": "company_news/cover/tu 2-KEEL Mini lightweight design.jpg",
+      "href": ""
+    },
+    {
+      "type": 2,
+      "height": 18
+    },
+    {
+      "type": 1,
+      "txt": "紧凑尺寸，便于携带",
+      "txt_en": "Compact Size, Easy to Carry",
+      "color": "#000",
+      "fontSize": 22,
+      "fontWeight": "bold",
+      "decoration": 2
+    },
+    {
+      "type": 1,
+      "txt": "KEEL Mini 遵循模块化设计，持续优化结构设计。最大对称轴距为906毫米，比同类产品更小更轻，可在直径2米的区域内安全起降。拆卸起落架后，整机可轻松放入汽车后备箱，方便频繁执行飞行任务。",
+      "txt_en": "KEEL Mini follows a modular approach, continuously optimizing its structural design. With a maximum symmetrical wheelbase of 906mm, it is smaller and lighter than others in its class, capable of safe takeoff and landing within a 2-meter diameter area. After removing the landing gear, the entire drone can easily fit into a car trunk, making it highly convenient for frequent flight missions.",
+      "color": "#000",
+      "fontSize": 22,
+      "fontWeight": "normal",
+      "decoration": 0
+    },
+    {
+      "type": 2,
+      "height": 18
+    },
+    {
+      "type": 3,
+      "src": "company_news/tu 3-KEEL Mini Compact Size, Easy to Carry.jpg",
+      "href": ""
+    },
+    {
+      "type": 2,
+      "height": 18
+    },
+    {
+      "type": 1,
+      "txt": "强劲动力，实现高速飞行",
+      "txt_en": "Powerful Propulsion for High-Speed Flight",
+      "color": "#000",
+      "fontSize": 22,
+      "fontWeight": "bold",
+      "decoration": 2
+    },
+    {
+      "type": 1,
+      "txt": "新一代超轻碳纤维折叠螺旋桨，采用独特的翼尖设计，搭配专用的 KEEL Mini 电机，优化了效率、可靠性和重量。这一组合确保了更长的飞行时间，同时在整个操作过程中保持安全性和稳定性。飞行中，螺旋桨高速旋转，为电池和机身提供全方位散热，有助于提升整体系统的效率和性能，确保无人机即使在高负载任务下也能保持稳定和可靠的运行。精密的结构、卓越的刚性和优异的动力系统，使 KEEL Mini 实现了最高瞬时飞行速度40米/秒，媲美竞速级无人机。",
+      "txt_en": "The new generation of ultra-light carbon fiber folding propellers, featuring a unique blade tip design, is paired with the dedicated KEEL Mini motors to optimize efficiency, reliability, and weight. This combination ensures longer flight times while maintaining safety and stability throughout operations.",
+      "color": "#000",
+      "fontSize": 22,
+      "fontWeight": "normal",
+      "decoration": 0
+    },
+    {
+      "type": 2,
+      "height": 18
+    },
+    {
+      "type": 3,
+      "src": "company_news/tu 4-KEEL Mini Powerful Propulsion for High-Speed Flight.jpg",
+      "href": ""
+    },
+    {
+      "type": 2,
+      "height": 18
+    },
+    {
+      "type": 1,
+      "txt": "",
+      "txt_en": "During flight, the propellers rotate at high speed, providing comprehensive cooling to both the battery and the body. This helps enhance the overall system’s efficiency and performance, ensuring that the drone remains stable and operates reliably even under high-load tasks.",
+      "color": "#000",
+      "fontSize": 22,
+      "fontWeight": "normal",
+      "decoration": 0
+    },
+    {
+      "type": 2,
+      "height": 18
+    },
+    {
+      "type": 3,
+      "src": "company_news/tu 5-Powerful Propulsion for High-Speed Flight-2.jpg",
+      "href": ""
+    },
+    {
+      "type": 2,
+      "height": 18
+    },
+    {
+      "type": 1,
+      "txt": "",
+      "txt_en": "The precise structure, excellent rigidity, and superior power system enable KEEL Mini to achieve a maximum instantaneous flight speed of 40m/s, comparable to racing-class drones.",
+      "color": "#000",
+      "fontSize": 22,
+      "fontWeight": "normal",
+      "decoration": 0
+    },
+    {
+      "type": 2,
+      "height": 18
+    },
+    {
+      "type": 1,
+      "txt": "KEEL MINI高速特技飞行演示",
+      "txt_en": "KEEL Mini High-Speed Flight Segment",
+      "color": "#000",
+      "fontSize": 22,
+      "fontWeight": "bold",
+      "decoration": 2
+    },
+    {
+      "type": 4,
+      "src": "company_news/KEEL MINI高速特技飞行演示.mp4"
+    },
+    {
+      "type": 2,
+      "height": 18
+    },
+    {
+      "type": 3,
+      "src": "company_news/tu 6-like logo customize every flight.jpg",
+      "href": ""
+    },
+    {
+      "type": 2,
+      "height": 18
+    },
+    {
+      "type": 1,
+      "txt": "极致模块化设计",
+      "txt_en": "KEEL Mini Extreme Modular Design",
+      "color": "#000",
+      "fontSize": 22,
+      "fontWeight": "bold",
+      "decoration": 2
+    },
+    {
+      "type": 1,
+      "txt": "机架在结构和空气动力学性能上采用对称设计，带来更高的稳定性和更强的机动性。独特的“龙爪连接器”结构，使机臂和机身可快速拆装。插拔式起落架可灵活定制长度，便于运输。模块化设计使用户可根据需要快速更换部件，节省时间和精力，降低维护成本。",
+      "txt_en": "The frame features a symmetrical design in both structure and aerodynamic performance, resulting in greater stability and enhanced maneuverability during flight. The unique structure—Dragon Claw Connector—enables quick assembly and disassembly of the arms and body. The plug-in landing gear can be flexibly customized in length for more convenient transport. The modular design allows users to quickly replace components according to their needs, saving time and effort while reducing maintenance costs.",
+      "color": "#000",
+      "fontSize": 22,
+      "fontWeight": "normal",
+      "decoration": 0
+    },
+    {
+      "type": 2,
+      "height": 18
+    },
+    {
+      "type": 1,
+      "txt": "KEEL MINI开箱及组装教学",
+      "txt_en": "KEEL Mini Unboxing and Assembly",
+      "color": "#000",
+      "fontSize": 22,
+      "fontWeight": "bold",
+      "decoration": 2
+    },
+    {
+      "type": 4,
+      "src": "company_news/0507 KEEL MINI开箱及组装教学.mp4"
+    },
+    {
+      "type": 2,
+      "height": 18
+    },
+    {
+      "type": 1,
+      "txt": "多重扩展接口，灵活适应",
+      "txt_en": "Multiple Expansion Ports for Flexible Adaptation",
+      "color": "#000",
+      "fontSize": 22,
+      "fontWeight": "normal",
+      "decoration": 0
+    },
+    {
+      "type": 1,
+      "txt": "KEEL Mini 拥有强大的扩展性，用户可根据任务需求选择挂载设备。通过中航通创新自主研发的潘多拉快拆结构，可快速连接各种设备，兼容市场主流设备，如探照灯、扬声器、载荷模块和投放装置。更换设备无需繁琐的拆卸或修改无人机电路。",
+      "txt_en": "KEEL Mini features strong expandability, allowing users to select payload equipment based on mission requirements. With ZHT Aero’s self-developed Pandora quick-release structure, it can quickly connect to various devices, accommodating mainstream market equipment such as searchlights, loudspeakers, payload modules, and dropping devices. Swapping equipment does not require cumbersome disassembly or modifications to the drone’s circuitry.",
+      "color": "#000",
+      "fontSize": 18,
+      "fontWeight": "normal",
+      "decoration": 0
+    },
+    {
+      "type": 2,
+      "height": 18
+    },
+    {
+      "type": 3,
+      "src": "company_news/tu 7-Multiple Expansion Ports for Flexible Adaptation.jpg",
+      "href": ""
+    },
+    {
+      "type": 2,
+      "height": 18
+    },
+    {
+      "type": 1,
+      "txt": "KEEL Mini 集成系统案例",
+      "txt_en": "KEEL Mini Integrated System Case Study",
+      "color": "#000",
+      "fontSize": 22,
+      "fontWeight": "bold",
+      "decoration": 2
+    },
+    {
+      "type": 2,
+      "height": 18
+    },
+    {
+      "type": 3,
+      "src": "company_news/tu 8-KEEL Mini Integrated System Case Study.jpg",
+      "href": ""
+    },
+    {
+      "type": 3,
+      "src": "company_news/tu 9-KEEL Mini Integrated System Case Study-2.jpg",
+      "href": ""
+    },
+    {
+      "type": 3,
+      "src": "company_news/tu 10- DIY FRIENDLY ,THE FIRST QUADCOPTER FOR BEGINNERS.jpg",
+      "href": ""
+    },
+    {
+      "type": 2,
+      "height": 18
+    },
+    {
+      "type": 1,
+      "txt": "预留多个孔位，提供充足的操作空间",
+      "txt_en": "Multiple Reserved Holes for Ample Operating Space",
+      "color": "#000",
+      "fontSize": 22,
+      "fontWeight": "bold",
+      "decoration": 2
+    },
+    {
+      "type": 3,
+      "src": "company_news/TU 11-Multiple Reserved Holes for Ample Operating Space.jpg",
+      "href": ""
+    },
+    {
+      "type": 2,
+      "height": 18
+    },
+    {
+      "type": 1,
+      "txt": "充足的电源供应",
+      "txt_en": "Abundant Power Supply",
+      "color": "#000",
+      "fontSize": 22,
+      "fontWeight": "bold",
+      "decoration": 2
+    },
+    {
+      "type": 3,
+      "src": "company_news/TU 12-Abundant Power Supply.jpg",
+      "href": ""
+    },
+    {
+      "type": 2,
+      "height": 18
+    },
+    {
+      "type": 1,
+      "txt": "安全稳定的飞行体验",
+      "txt_en": "Safe and Stable Flight Experience",
+      "color": "#000",
+      "fontSize": 22,
+      "fontWeight": "bold",
+      "decoration": 2
+    },
+    {
+      "type": 1,
+      "txt": "多次校准和优化的 PID 增强了飞行稳定性，降低了初学者的作难度。",
+      "txt_en": "Multiple Calibrations and Optimized PID for Enhanced Flight Stability, Reducing the Difficulty of Operation for Beginners.",
+      "color": "#000",
+      "fontSize": 22,
+      "fontWeight": "normal",
+      "decoration": 0
+    },
+    {
+      "type": 2,
+      "height": 18
+    },
+    {
+      "type": 1,
+      "txt": "在路锥正上方稳定悬停",
+      "txt_en": "Stable Hovering Directly Above the Traffic Cone",
+      "color": "#000",
+      "fontSize": 22,
+      "fontWeight": "bold",
+      "decoration": 2
+    },
+    {
+      "type": 3,
+      "src": "company_news/TU 13-Stable Hovering Directly Above the Traffic Cone.jpg",
+      "href": ""
+    },
+    {
+      "type": 2,
+      "height": 18
+    },
+    {
+      "type": 1,
+      "txt": "模块化概念赋予了KEEL系列灵活适应、快速维护和自由扩展的独特优势，使每一次飞行都成为创新的延续和可能性的实现。",
+      "txt_en": "The modular concept endows the KEEL series with unique advantages of flexible adaptation, quick maintenance, and free expansion, making each flight a continuation of innovation and a realization of possibilities.",
+      "color": "#000",
+      "fontSize": 22,
+      "fontWeight": "normal",
+      "decoration": 0
+    },
+    {
+      "type": 2,
+      "height": 18
+    },
+    {
+      "type": 3,
+      "src": "company_news/tu 14- oem odm service -customized to your needs.jpg",
+      "href": ""
+    },
+    {
+      "type": 3,
+      "src": "company_news/TU 15-KEEL MINI QUADCOPTER.jpg",
+      "href": ""
+    }
+  ]
+}

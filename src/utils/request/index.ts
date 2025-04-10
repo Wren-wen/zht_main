@@ -24,12 +24,12 @@ const myRequest = new MYRequest({
       return res;
     },
     responseInterceptorCatch: (err) => {
-      console.log("响应失败的拦截", err);
-      if (err.response.status === 401) {
-        removeToken();
-        alert('登录已过期，请重新登陆')
+      // console.log("响应失败的拦截", err);
+      // if (err.response.status === 401) {
+      //  removeToken();
+      //  alert('登录已过期，请重新登陆')
         // location.reload();
-      }
+      // }
       return err;
     },
   },

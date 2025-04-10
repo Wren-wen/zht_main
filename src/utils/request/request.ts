@@ -54,6 +54,7 @@ class MYRequest {
     );
     this.instance.interceptors.response.use(
       (res) => {
+        console.log(res)
         const data = res.data as any;
         if (data.returnCode === "-1001") {
           console.log("请求失败,错误信息");
@@ -68,16 +69,16 @@ class MYRequest {
         }
       },
       (err) => {
-        console.log("所有实例的拦拦截器:响应拦截失败");
-        if (err.response && err.response.status === 404) {
+        // console.log("所有实例的拦拦截器:响应拦截失败");
+        // if (err.response && err.response.status === 404) {
         //   console.log("404的错误");
-        } else if (err.response && err.response.status === 401) {
+        // } else if (err.response && err.response.status === 401) {
           // 不知道为什么这里写不生效！！
           // removeToken();
           // ElMessage.warning('token过期，请重新登录')
           // alert('token过期，请重新登录')
           // location.reload();
-        }
+        // }
         return err;
       }
     );

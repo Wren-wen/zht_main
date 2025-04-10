@@ -5,13 +5,13 @@
                 item: 1,
                 item3: idx == 2,
             }" v-for="(i, idx) in infos">
-                <h1>
-                    <lan :en="i.h1" :zh="i.h1" />
-                </h1>
-                <div @click="goCategory(j.category)" class="bar nose pointer" v-for="j in i.bar">
+                <div class="title">
+                    <lan :en="i.en" :zh="i.zh" />
+                </div>
+                <div @click="goCategory(j.category)" class="bar nose pointer" :class="`bar${idx}_${j_idx}`" v-for="(j, j_idx) in i.bar">
                     <img class="one" :src="j.img" alt="">
                     <h2>
-                        <lan :en="j.h2" :zh="j.h2" />
+                        <lan :en="j.en" :zh="j.zh" />
                     </h2>
                 </div>
             </div>
@@ -19,21 +19,23 @@
         <div class="item-container">
             <div class="item2" v-for="i in info2">
                 <h3>
-                    <lan :en="i.h3" :zh="i.h3" />
+                    <lan :en="i.en" :zh="i.zh" />
                 </h3>
-                <img class="two" :src="i.img" alt="">
+                <img class="two" :src="isZh ? i.imgZh : i.imgEn" alt="">
             </div>
         </div>
     </div>
 </template>
 
 <script setup>
-import { ref, reactive, onMounted, } from 'vue'
+import { ref, reactive, onMounted, inject } from 'vue'
 import pubuse from '@/utils/pub-use'
 import { useRoute, useRouter } from "vue-router"
 
 const route = useRoute()
 const router = useRouter()
+
+let isZh = inject('isZh');
 
 
 const goCategory = (id) => {
@@ -50,124 +52,156 @@ const goCategory = (id) => {
 
 const info2 = reactive([
     {
-        h3: '超轻碳纤维桨',
-        img: pubuse('比例图/350x300.png'),
+        zh: '超轻碳纤维桨',
+        en: 'Ultra-light Carbon Fiber Propellers',
+        imgEn: pubuse('目录/accessory/螺旋桨_EN.jpg'),
+        imgZh: pubuse('目录/accessory/螺旋桨_CN.jpg'),
     },
     {
-        h3: '双RTK厘米级定位',
-        img: pubuse('比例图/350x300.png'),
+        zh: '双RTK厘米级定位',
+        en: 'Dual RTK Centimeter-level Positioning',
+        imgEn: pubuse('目录/accessory/ZED-F9P_EN.jpg'),
+        imgZh: pubuse('目录/accessory/ZED-F9P_CN.jpg'),
     },
     {
-        h3: '四光4K方形吊舱',
-        img: pubuse('比例图/350x300.png'),
+        zh: '方形智能四光吊舱',
+        en: 'Intelligent Multi-sensor Pod',
+        imgEn: pubuse('目录/accessory/ZH30ATL_EN.jpg'),
+        imgZh: pubuse('目录/accessory/ZH30ATL_CN.jpg'),
     },
     {
-        h3: '高能量倍率电池',
-        img: pubuse('比例图/350x300.png'),
+        zh: '高能量倍率电池',
+        en: 'High Energy Density Battery',
+        imgEn: pubuse('目录/accessory/大电池_EN.jpg'),
+        imgZh: pubuse('目录/accessory/大电池_CN.jpg'),
     },
 ])
 
 const infos = reactive([
     {
-        h1: '动力系统',
+        zh: '动力系统',
+        en: 'Power System',
         bar: [
             {
-                img: pubuse('比例图/1x1.png'),
-                h2: '螺旋桨',
+                img: pubuse('目录/accessory/螺旋桨.jpg'),
+                zh: '螺旋桨',
+                en: 'Propeller',
                 category: '1' //分类路径节点
             },
             {
-                img: pubuse('比例图/1x1.png'),
-                h2: '电机'
+                img: pubuse('目录/accessory/电机.jpg'),
+                zh: '电机',
+                en: 'Motor'
             },
             {
-                img: pubuse('比例图/1x1.png'),
-                h2: '电调'
+                img: pubuse('目录/accessory/电调.jpg'),
+                zh: '电调',
+                en: 'ESC',
             },
             {
-                img: pubuse('比例图/1x1.png'),
-                h2: '单轴动力'
+                img: pubuse('目录/accessory/单轴动力.jpg'),
+                zh: '单轴动力',
+                en: 'Standard',
             },
             {
-                img: pubuse('比例图/1x1.png'),
-                h2: '共轴动力'
-            },
-        ],
-    },
-    {
-        h1: '飞控系统',
-        bar: [
-            {
-                img: pubuse('比例图/1x1.png'),
-                h2: '飞控'
-            },
-            {
-                img: pubuse('比例图/1x1.png'),
-                h2: 'GPS/RTK'
+                img: pubuse('目录/accessory/共轴动力.jpg'),
+                zh: '共轴动力',
+                en: 'Coaxial'
             },
         ],
     },
     {
-        h1: '链路',
+        zh: '飞控系统',
+        en: 'Flight Control System',
         bar: [
             {
-                img: pubuse('比例图/1x1.png'),
-                h2: '图传数传'
+                img: pubuse('目录/accessory/飞控.jpg'),
+                zh: '飞控',
+                en: 'Flight Control'
             },
             {
-                img: pubuse('比例图/1x1.png'),
-                h2: '遥控器'
+                img: pubuse('目录/accessory/GPS_RTK.jpg'),
+                zh: 'GPS/RTK',
+                en: 'GPS/RTK'
             },
         ],
     },
     {
-        h1: '电源管理',
+        zh: '链路',
+        en: 'Link',
         bar: [
             {
-                img: pubuse('比例图/1x1.png'),
-                h2: '电源模块'
+                img: pubuse('目录/accessory/图传数传.jpg'),
+                zh: '图传数传',
+                en: 'Image/data',
             },
             {
-                img: pubuse('比例图/1x1.png'),
-                h2: '电池'
+                img: pubuse('目录/accessory/遥控器.jpg'),
+                zh: '遥控器',
+                en: 'Remote Control',
+            },
+        ],
+    },
+    {
+        zh: '电源管理',
+        en: 'Power Management',
+        bar: [
+            {
+                img: pubuse('目录/accessory/电源模块.jpg'),
+                zh: '电源模块',
+                en: 'Power module',
             },
             {
-                img: pubuse('比例图/1x1.png'),
-                h2: '充电器'
+                img: pubuse('目录/accessory/电池.jpg'),
+                zh: '电池',
+                en: 'Battery',
+            },
+            {
+                img: pubuse('目录/accessory/充电器.jpg'),
+                zh: '充电器',
+                en: 'Battery charger',
             }
         ],
     },
     {
-        h1: '载荷设备',
+        zh: '载荷设备',
+        en: 'Payload Equipment',
         bar: [
             {
-                img: pubuse('比例图/1x1.png'),
-                h2: '吊舱'
+                img: pubuse('目录/accessory/吊舱.jpg'),
+                zh: '吊舱',
+                en: 'Gmbal',
             },
             {
-                img: pubuse('比例图/1x1.png'),
-                h2: '抛放装置'
+                img: pubuse('目录/accessory/抛投装置.jpg'),
+                zh: '抛投装置',
+                en: 'Air drop device',
             },
             {
-                img: pubuse('比例图/1x1.png'),
-                h2: '喊话器'
+                img: pubuse('目录/accessory/喊话器.jpg'),
+                zh: '喊话器',
+                en: 'Megaphone',
             },
             {
-                img: pubuse('比例图/1x1.png'),
-                h2: '探照灯'
+                img: pubuse('目录/accessory/探照灯.jpg'),
+                zh: '探照灯',
+                en: 'Searchlight'
             },
         ],
     },
     {
-        h1: '其他',
+        zh: '其他',
+        en: 'Other',
         bar: [
             {
-                img: pubuse('比例图/1x1.png'),
-                h2: '线材配件'
+                img: pubuse('目录/accessory/线材配件.jpg'),
+                zh: '线材配件',
+                en: 'Wire fitting',
             },
             {
-                img: pubuse('比例图/1x1.png'),
-                h2: '非标配件'
+                img: pubuse('目录/accessory/非标配件.jpg'),
+                zh: '非标配件',
+                en: 'Non-standard parts',
             },
         ],
     },
@@ -175,10 +209,11 @@ const infos = reactive([
 
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 .Pop_c {
-    height: 800px;
-    padding: 0px 0 40px 180px;
+    height: 760px;
+    padding: 0px 0 40px 210px;
+    background-color: #dcdcdc;
 }
 
 .item-container {
@@ -187,11 +222,33 @@ const infos = reactive([
 }
 
 .item {
-    margin-right: 190px;
+    // margin-right: 190px;
+    width: 240px;
+    margin-right: 35px;
+}
+
+
+.title {
+    position: relative;
+    font-size: 20px;
+    font-weight: 500;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.title::after {
+    content: "";
+    position: absolute;
+    left: -1000px;
+    overflow-x: hidden;
+    width: 1000vw;
+    bottom: 0;
+    height: 3px;
+    background-color: #bebebe;
 }
 
 .item3 {
-    margin-right: 232px;
+    // margin-right: 232px;
 }
 
 h1,
@@ -202,7 +259,7 @@ h3 {
 
 h1 {
     color: black;
-    font-size: 20px;
+    font-size: 21px;
     height: 100px;
     display: flex;
     align-items: center;
@@ -227,7 +284,8 @@ h2 {
     font-size: 19px;
     white-space: nowrap;
     position: absolute;
-    left: 50px;
+    left: 45px;
+    line-height: 30px;
 }
 
 h3 {
@@ -240,7 +298,8 @@ h3 {
 img.two {
     width: 350px;
     height: 240px;
-    background-color: #efefef
+    background-color: #efefef;
+    border-radius: 12px;
 }
 
 .item2 {

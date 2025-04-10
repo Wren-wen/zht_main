@@ -7,7 +7,7 @@
 <script setup>
 import { ref, reactive, onMounted,onUnmounted, watch, inject } from 'vue'
 import { useRoute, useRouter } from "vue-router"
-import { getItem } from '@/api/configuration/product'
+import { getProduct } from '@/api/configuration/product'
 import { ElMessage } from 'element-plus'
 
 const route = useRoute()
@@ -17,7 +17,7 @@ const product_id = ref(0)
 const productJson = ref()
 
 watch(product_id, (to, from) => {
-    getItem(to).then(res => {
+    getProduct(to).then(res => {
         productJson.value = res
     }).catch(err => {
         productJson.value = null

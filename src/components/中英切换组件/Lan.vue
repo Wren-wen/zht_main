@@ -1,6 +1,8 @@
 <!-- url中加入query参数lan=en or lan=zh默认英文 -->
 <template>
-    {{ valtxt }}
+    <span>
+        {{ valtxt }}
+    </span>
 </template>
 
 <script setup>

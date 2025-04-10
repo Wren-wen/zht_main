@@ -4,6 +4,10 @@
     </div>
 </template>
 
+<script setup>
+
+</script>
+
 <style scoped>
 .Padding{
     width: 100%;

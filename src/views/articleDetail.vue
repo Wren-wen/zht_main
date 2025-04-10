@@ -7,7 +7,7 @@
 <script setup>
 import { ref, reactive, onMounted, onUnmounted, watch, inject } from 'vue'
 import { useRoute, useRouter } from "vue-router"
-import { getItem } from '@/api/configuration/article'
+import { getArticle } from '@/api/configuration/article'
 
 
 const route = useRoute()
@@ -17,7 +17,7 @@ const article_id = ref(0)
 const articleJson = ref()
 
 watch(article_id, (to, from) => {
-    getItem(to).then(res => {
+    getArticle(to).then(res => {
         articleJson.value = res
     }).catch(err => {
         articleJson.value = null
