@@ -13,7 +13,7 @@
 </template>
 
 <script setup>
-import { ref, toRef, reactive, onUnmounted, inject, watch, computed } from 'vue'
+import { ref, toRef, reactive, onMounted, onUnmounted, inject, watch, computed } from 'vue'
 import { getIndex, getArticle } from '@/api/configuration/article'
 
 const props = defineProps(['value'])
@@ -46,7 +46,11 @@ const trigger = (op, immediate = false) => {
         inter = setInterval(interFn, 1000)
     }
 }
-trigger(1, true)
+
+onMounted(() => {
+    trigger(1, true)
+})
+
 onUnmounted(() => {
     trigger(0)
 })

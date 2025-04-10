@@ -1,0 +1,85 @@
+{
+  "id": 4,
+  "cover": "company_news/cover/图 1-KEEL-MINI海报02-1024x565.jpg",
+  "title": "欢迎我们的新无人机 —— KEEL MINI",
+  "title_en": "Welcome Our New Drone —— KEEL MINI",
+  "timestamp": "2023-12-16T07:09:57.000Z",
+  "tags": {
+    "1": {
+      "zh": "公司新闻",
+      "en": "company news"
+    }
+  },
+  "frame": [
+    {
+      "type": 2,
+      "height": 20
+    },
+    {
+      "type": 1,
+      "txt": "经过长时间的研发和测试，我们很高兴迎来中航通创新无人机家族的新成员——KEEL Mini！",
+      "txt_en": "After a long period of R&D and testing, we are delighted to welcome a new member of the ZHT family – KEEL Mini!",
+      "color": "#000",
+      "fontSize": 22,
+      "fontWeight": "normal",
+      "decoration": 0
+    },
+    {
+      "type": 2,
+      "height": 18
+    },
+    {
+      "type": 1,
+      "txt": "KEEL Mini 是由中航通创新独立研发的模块化四旋翼无人机，其机架、臂架和螺旋桨采用高强度碳纤维和航空铝合金材料制造，确保了无人机的整体强度，同时保持轻量化。其空重仅约 3.7 公斤（不包括电池和螺旋桨），对称的轴距约为 906 毫米。模块化设计使其更加便于携带和运输，单人即可轻松操作。紧凑的尺寸使其能够在直径为 2 米的场地安全起降。",
+      "txt_en": "KEEL Mini is a modular four-rotor drone independently developed by ZHT AERO. Its frame, arms and propellers are made of high-strength carbon fiber and aviation aluminum materials, which ensures the overall strength of the drone while lightweight. Its empty weight is only about 3.7kg (excl. battery and props), and the symmetrical wheelbase is about 906mm. The modular design makes it easier for users to carry and transport, one person can easily operate it. Its compact size can safely take off and land in a venue with a diameter of 2 meters.",
+      "color": "#000",
+      "fontSize": 22,
+      "fontWeight": "normal",
+      "decoration": 0
+    },
+    {
+      "type": 2,
+      "height": 18
+    },
+    {
+      "type": 3,
+      "src": "company_news/cover/图 1-KEEL-MINI海报02-1024x565.jpg",
+      "href": ""
+    },
+    {
+      "type": 2,
+      "height": 18
+    },
+    {
+      "type": 1,
+      "txt": "KEEL Mini 配备了两对 22 英寸可折叠螺旋桨、四个 135KV 电机和两块 19200mAh 固态电池，为飞行提供强大的动力和长时间续航。有效飞行时间为 70 分钟（无负载），最大起飞重量为 16 公斤，最大载重能力为 8 公斤，真正实现了“小巧”与“强大”的完美结合。",
+      "txt_en": "KEEL Mini is equipped with two pairs of 22-inch folding propellers, four 135KV motors, and two 19200mAh solid-state batteries, which provide powerful power and long endurance for its flight. The effective flight time is 70 minutes (no payload), the maximum takeoff weight is 16kg, and the maximum load capacity is 8kg. Truly “small” but “strong”.",
+      "color": "#000",
+      "fontSize": 22,
+      "fontWeight": "normal",
+      "decoration": 0
+    },
+    {
+      "type": 2,
+      "height": 18
+    },
+    {
+      "type": 1,
+      "txt": "KEEL Mini 标配一个 Pandora 快拆结构，可支持最多安装 4 个设备。此类结构设计适用于各种扩展应用，如云台相机、扩音器、探照灯、空投设备等。同时，机身还预留了扩展安装孔位，可安装降落伞、GPS 模块、视频与数据链等设备，广泛应用于物流、农业、测绘、应急救援等领域。依托自主研发的优势，KEEL Mini 提供定制化服务，充分满足不同行业的需求。",
+      "txt_en": "KEEL Mini comes standard with one Pandora quick release structure, which can support up to 4 pcs. It is suitable for various expansions such as gimbal camera, megaphone, searchlight, air drop device and so on. At the same time, it has reserved expansion installation holes for installing parachutes, GPS module, video & data link and other equipment, can be widely used in logistics, agriculture, surveying & mapping, emergency rescue and other areas. Relying on the advantages of independent research and development, Keel Mini supports customized services to fully meet the needs of different industries.",
+      "color": "#000",
+      "fontSize": 22,
+      "fontWeight": "normal",
+      "decoration": 0
+    },
+    {
+      "type": 2,
+      "height": 18
+    },
+    {
+      "type": 3,
+      "src": "company_news/图2-KEEL-MINI海报01-1024x683.jpg",
+      "href": ""
+    }
+  ]
+}

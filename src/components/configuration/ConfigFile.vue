@@ -21,7 +21,7 @@
 <script setup>
 import { ref, reactive, onMounted, watch } from 'vue'
 import useDrop from '@/hooks/configuration/useDrop'
-import {getImageBed} from '@/api/configuration'
+import { getImageBed } from '@/api/configuration'
 
 
 const props = defineProps(['cover'])

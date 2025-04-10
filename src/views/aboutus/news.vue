@@ -1,7 +1,7 @@
 <template>
     <div class="news">
         <div class="title">
-            <lan en="新闻" zh="新闻" />
+            <lan en="News" zh="新闻" />
         </div>
         <div class="container">
             <div class="tabbar">
@@ -9,14 +9,26 @@
                     tab: 1,
                     active: tab.tag == tabidx
                 }" v-for="(tab, idx) in tablist">
-                    <div>{{ tab.name }}</div>
+                    <div>
+                        <lan :en="tab.en" :zh="tab.zh" /> 
+                    </div>
                     <div class="dot"></div>
                 </div>
             </div>
             <div class="content">
                 <div @click="goArticle(item.id)" class="item" v-for="item in data">
+                    <div class="news-tag">
+                        {{ item.tags['1'].en }}
+                    </div>
                     <div class="cover">
                         <img :src="`configuration/image_bed/${item?.cover}`" alt="">
+                    </div>
+                    <div class="news-title">
+                        {{ item.title_en }}
+                    </div>
+                    <div class="sup-line"></div>
+                    <div class="pub-time">
+                        {{ item.timestamp.split('T')[0] }} &nbsp;·&nbsp; {{ item.timestamp.split('T')[1].slice(0, 5) }}
                     </div>
                 </div>
             </div>
@@ -100,11 +112,13 @@ const eachN = 8
 
 const tablist = [
     {
-        name: '公司新闻',
+        zh: '公司新闻',
+        en: 'Company News',
         tag: 1, // 分类id，可自己指定用于筛选类别
     },
     {
-        name: '产品更新',
+        zh: '产品更新',
+        en: 'Products Update',
         tag: 2, // 分类id，可自己指定用于筛选类别
     },
 ]
@@ -112,11 +126,16 @@ const tablist = [
 
 const allTags = computed(() => {
     let tags = {};
+    console.log(INDEX)
     for (const key in INDEX.article) {
         Object.assign(tags, INDEX.article[key].tags)
     }
     return tags;
 })
+
+const goArticle = (id) => {
+    router.push({ name: 'articleDetail', params: { id: id }, query: { ...route.query } })
+}
 
 watch(tabidx, (to, from) => {
     if (!to) return;
@@ -136,16 +155,14 @@ watch([pagen, tabidx], (to, from) => {
     })
     allpagen.value = Math.ceil(dataAll.length / eachN)
     data.value = dataAll.slice(pagen.value * eachN, (pagen.value + 1) * eachN);
-    // console.log(data.value);
-
 }, { immediate: true })
 
-const goArticle = (id) => {
-    router.push({ name: 'articleDetail', params: { id: id }, query: { ...route.query } })
-}
+onMounted(() => {
+    
+})
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 .news {
     width: 100%;
 }
@@ -173,7 +190,7 @@ const goArticle = (id) => {
 }
 
 .content {
-    min-height: 60vh;
+    // min-height: 60vh;
     width: 100%;
     position: relative;
     --gap: 30px;
@@ -218,12 +235,48 @@ const goArticle = (id) => {
 .item {
     /* width: 377px; */
     width: calc(calc(100% - var(--gap)*4) / 4);
-    height: 380px;
+    // height: 380px;
     margin: calc(var(--gap)/2);
     background-color: #fff;
     display: flex;
     flex-direction: column;
     box-shadow: 0 0 10px #ccc;
+    position: relative;
+    .news-tag {
+        position: absolute;
+        background-color: #69727d;
+        color: #fff;
+        padding: 4px 10px;
+        border-radius: 18px;
+        font-size: 17px;
+        right: calc(0% + 12px);
+        top: 12px;
+    }
+    .cover {
+        // height: 300px;
+        width: 100%;
+        cursor: pointer;
+        img {
+            height: 210px;
+            object-fit: cover;
+        }
+    }
+    .news-title {
+        font-weight: bold;
+        font-size: 20px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        padding: 14px 12px 8px 12px;
+    }
+    .sup-line {
+        height: 1.5px;
+        background: #ececec;
+    }
+    .pub-time {
+        padding: 10px 12px;
+        color: #adadad;
+    }
 }
 
 .cover {

@@ -65,6 +65,7 @@ declare module '@vue/runtime-core' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Searcher: typeof import('./src/components/导航栏/Searcher.vue')['default']
+    SubTitle: typeof import('./src/components/首页/SubTitle.vue')['default']
     Title0: typeof import('./src/components/首页/Title0.vue')['default']
     Title1: typeof import('./src/components/首页/Title1.vue')['default']
     Title2: typeof import('./src/components/首页/Title2.vue')['default']

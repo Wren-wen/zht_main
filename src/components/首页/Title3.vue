@@ -4,7 +4,7 @@
             <div v-if="0" class="icon iconfont icon-news"></div>
             <lan en="NEWS" zh="新闻" />
         </div>
-        <div class="right">
+        <div class="right" v-if="0">
             <button0>
                 <lan en="More News" zh="更多新闻" />
             </button0>
@@ -16,12 +16,6 @@
 import { ref, reactive, onMounted, } from 'vue'
 import pubuse from '@/utils/pub-use'
 
-
-const urls = [
-    pubuse('无人机/wurenji.png'),
-    pubuse('无人机/wurenji1.png'),
-    pubuse('无人机/wurenji2.png'),
-]
 
 </script>
 
@@ -41,8 +35,7 @@ const urls = [
     justify-content: space-between;
     position: sticky;
     /* top: 0px; */
-    background-color: rgb(199, 64, 64);
-    background-color: rgba(255, 255, 255, 0.485);
+    background-color: #f1f1f1;
     /* box-shadow: 0 -3px 6px rgba(0, 0, 0, .08); */
     backdrop-filter: blur(10px);
     overflow: hidden;

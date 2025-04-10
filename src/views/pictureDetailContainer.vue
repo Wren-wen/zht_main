@@ -7,7 +7,7 @@
 <script setup>
 import { ref, reactive, onMounted, onUnmounted, watch, inject } from 'vue'
 import { useRoute, useRouter } from "vue-router"
-import { getItem } from '@/api/configuration/picture'
+import { getPicture } from '@/api/configuration/picture'
 
 
 const route = useRoute()
@@ -17,7 +17,7 @@ const picture_id = ref(0)
 const pictureJson = ref()
 
 watch(picture_id, (to, from) => {
-    getItem(to).then(res => {
+    getPicture(to).then(res => {
         pictureJson.value = res
     }).catch(err => {
         pictureJson.value = null

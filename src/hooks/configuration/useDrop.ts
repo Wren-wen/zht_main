@@ -1,9 +1,12 @@
 import { ElMessage } from 'element-plus';
 import { ref, onMounted, watch } from 'vue'
+import { uploadImage } from '@/api/configuration/image_bed';
 
 export default function(dom:any, callback:Function) {
     const isDragOver = ref(false)
     const delayRef = ref()
+    const imgRealPath = ref('')
+
     let timer:any;
     watch(isDragOver,()=>{
         clearTimeout(timer)
@@ -33,7 +36,12 @@ export default function(dom:any, callback:Function) {
             isDragOver.value = false
             // 过滤文件夹
             if(e.dataTransfer.files[0].size){
-                callback(e.dataTransfer.files[0].name)
+                const formData = new FormData()
+                formData.append('image', e.dataTransfer.files[0])
+                uploadImage(formData).then(res => {
+                    console.log(res)
+                    callback(e.dataTransfer.files[0].name)
+                })
             }else{
                 ElMessage.warning('请拖入文件')
             }

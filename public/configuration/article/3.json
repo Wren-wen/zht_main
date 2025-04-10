@@ -1,0 +1,72 @@
+{
+  "id": 3,
+  "cover": "company_news/cover/Keel mini Quadcopter Is Coming Soon!.jpg",
+  "title": "Keel MINI 四旋翼无人机即将到来！",
+  "title_en": "Keel MINI Quadcopter Is Coming Soon!",
+  "timestamp": "2023-10-19T03:24:47.000Z",
+  "tags": {
+    "1": {
+      "zh": "公司新闻",
+      "en": "company news"
+    }
+  },
+  "frame": [
+    {
+      "type": 2,
+      "height": 20
+    },
+    {
+      "type": 1,
+      "txt": "近日，中航通创新自主研发的多旋翼无人机 Keel Mini 完成了首次飞行测试，并取得了圆满成功。在 100 米的高度，携带 3 公斤的载荷，悬停时间达到了 40 分钟。此次测试充分展示了该产品的卓越性能和可靠性，得到了到访客户的高度评价。双方已就下一步合作达成初步共识，期待在未来的项目中实现互利共赢和共同发展。",
+      "txt_en": "Recently, the first test flight of Keel mini, a multi-rotor UAV independently developed by ZHT, was a complete success. At an altitude of 100 meters and carrying a payload of 3KG, the hovering time is up to 40 minutes. The test fully demonstrated the excellent performance and reliability of the product, which was highly praised by visiting customers. The two sides have reached a preliminary agreement on the next step of cooperation, hoping to achieve win-win and common development in the upcoming projects.",
+      "color": "#000",
+      "fontSize": 22,
+      "fontWeight": "normal",
+      "decoration": 0
+    },
+    {
+      "type": 2,
+      "height": 18
+    },
+    {
+      "type": 1,
+      "txt": "Keel Mini 的机架、机臂和螺旋桨均采用高强度碳纤维材料，既确保了无人机的强度，又保证了其轻量化。对称的轴距约为 815 毫米，模块化设计使得运输和携带更加便捷。起降要求低，直径为 2 米的场地即可安全着陆，最大载重预计可达 8 公斤，真正实现了“小巧”与“强大”的完美结合。",
+      "txt_en": "The frame, arms and propellers of the Keel Mini are made of high-strength carbon fiber material, which ensures the strength of the whole drone while ensuring the light weight. The symmetrical wheelbase is about 815mm, and its modular design is easier to transport and carry. Take-off and landing demand is low, with a diameter of 2 meters of the site can be safely landed, its maximum load capacity is expected to reach 8kg, really achieved “small” and “strong”.",
+      "color": "#000",
+      "fontSize": 22,
+      "fontWeight": "normal",
+      "decoration": 0
+    },
+    {
+      "type": 2,
+      "height": 18
+    },
+    {
+      "type": 1,
+      "txt": "中航通创新将继续提升研发产品，优化定制服务，积极探索无人机在各领域的扩展和适应的无限可能，为全球合作伙伴带来更加高效和安全的无人机产品。",
+      "txt_en": "ZHT will continue to improve research and development products, improve the level of customized services, actively explore the infinite possibilities of UAV expansion and adaptation in various fields, and bring more efficient and safer UAV products to global partners.",
+      "color": "#000",
+      "fontSize": 22,
+      "fontWeight": "normal",
+      "decoration": 0
+    },
+    {
+      "type": 2,
+      "height": 18
+    },
+    {
+      "type": 1,
+      "txt": "让我们共同期待 Keel Mini 的到来！",
+      "txt_en": "Let’s look forward to the Keel Mini!",
+      "color": "#000",
+      "fontSize": 22,
+      "fontWeight": "normal",
+      "decoration": 0
+    },
+    {
+      "type": 3,
+      "src": "company_news/cover/Keel mini Quadcopter Is Coming Soon!.jpg",
+      "href": ""
+    }
+  ]
+}

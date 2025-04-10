@@ -2,19 +2,19 @@
     <div class="Carousel nose">
         <div class="container">
             <div :class="{ item: 1, active: false }">
-                <img class="itemimg" :src="urls[urls.length - 2]" alt="">
+                <img class="itemimg" :src="isZh ? urls[urls.length - 2].zh : urls[urls.length - 2].en" alt="">
             </div>
             <div :class="{ item: 1, active: 0 == idx }">
-                <img class="itemimg" :src="urls[urls.length - 1]" alt="">
+                <img class="itemimg" :src="isZh ? urls[urls.length - 1].zh : urls[urls.length - 1].en" alt="">
             </div>
             <div :class="{ item: 1, active: i + 1 == idx }" v-for="(url, i) in urls">
-                <img class="itemimg" :src="url" alt="">
+                <img class="itemimg" :src="isZh ? url.zh : url.en" alt="">
             </div>
             <div :class="{ item: 1, active: urls.length + 1 == idx }">
-                <img class="itemimg" :src="urls[0]" alt="">
+                <img class="itemimg" :src="isZh ? urls[0].zh : urls[0].en" alt="">
             </div>
             <div :class="{ item: 1, active: false }">
-                <img class="itemimg" :src="urls[1]" alt="">
+                <img class="itemimg" :src="isZh ? urls[1].zh : urls[1].zh" alt="">
             </div>
         </div>
         <div class="dotbox flex">
@@ -32,14 +32,27 @@
 
 <script setup>
 import pubuse from '@/utils/pub-use'
-import { ref, reactive, onMounted, nextTick } from 'vue'
+import { ref, reactive, onMounted, nextTick, inject } from 'vue'
+
+let isZh = inject('isZh');
 
 const urls = reactive([
-    pubuse('轮播图/1.png'),
-    pubuse('轮播图/2.png'),
-    pubuse('轮播图/3.png'),
-    pubuse('轮播图/4.png'),
-    pubuse('轮播图/5.png'),
+    {
+        zh: pubuse('轮播图/1_CN.jpg'),
+        en: pubuse('轮播图/1.png')
+    },
+    {
+        zh: pubuse('轮播图/2_CN.jpg'),
+        en: pubuse('轮播图/2.png'),
+    },
+    {
+        zh: pubuse('轮播图/3_CN.jpg'),
+        en: pubuse('轮播图/3.png')
+    },
+    {
+        zh: pubuse('轮播图/4_CN.jpg'),
+        en: pubuse('轮播图/4.png')
+    }
 ])
 
 const idx = ref(1);
@@ -84,6 +97,20 @@ const trigger = (i) => {
 
 trigger(1)
 
+// onMounted(() => {
+//     if (isZh) {
+//         urls.push(pubuse('轮播图/1_CN.jpg'), pubuse('轮播图/2_CN.jpg'), pubuse('轮播图/3_CN.jpg'), pubuse('轮播图/4_CN.jpg'));
+//     } else {
+//         urls.push(pubuse('轮播图/1.png'), pubuse('轮播图/2.png'), pubuse('轮播图/3.png'), pubuse('轮播图/4.png'));
+//     }
+// });
+
+// watch((isZh), (newVal) => {
+//     urls.length = 0;
+//     if (isZh) {
+//         urls.push(pubuse('轮播图/1_CN.jpg'), pubuse('轮播图/2_CN.jpg'), pubuse('轮播图/3_CN.jpg'), pubuse('轮播图/4_CN.jpg'));
+//     } else urls.push(pubuse('轮播图/1.png'), pubuse('轮播图/2.png'), pubuse('轮播图/3.png'), pubuse('轮播图/4.png'));
+// }, { immediate: true })
 </script>
 
 <style scoped>

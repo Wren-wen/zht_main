@@ -1,1 +1,36 @@
-{"id":1,"cover":"e33fba17e08feb2c20b7bd0ccda587c.png","title":"KEEL Pro 极寒耐力测试：在0°C低温下进行全载荷挑战！","title_en":"KEEL Pro Endurance Test in Cold Winter: Full Payload Challenge at 0°C Low Temperature!","timestamp":1737388013703,"tags":{"1":{"zh":"公司新闻","en":"company news"}},"frame":[{"type":2,"height":18},{"type":1,"txt":"一段文字一段文字一段文字一段文字","txt_en":"The KEEL Pro performed exceptionally well in the winter test!","color":"#000","fontSize":29,"fontWeight":"bold","decoration":0},{"type":2,"height":18},{"type":1,"txt":"一段文字一段文字一段文字一段文字","txt_en":"Winter flight is not only a challenge of cold weather, but also a rigoroustest of the stability and endurance of drones! We conducted a hovering endurance test of the KEEL Pro with a full payload of 50 kg in the outdoor temperature of 0°C in the north to see if it can still maintain its strong performance in the cold!","color":"rgba(0, 0, 0, 1)","fontSize":22,"fontWeight":"normal","decoration":1},{"type":1,"txt":"一段文字一段文字一段文字一段文字","txt_en":"KEEL PRO 50kg 35-Minute Test Video","color":"rgba(255, 0, 0, 1)","fontSize":26,"fontWeight":"bold","decoration":2},{"type":2,"height":18},{"type":4,"src":"202412.12测试视频.mp4"},{"type":3,"src":"02-低温测试海报-1157x1536.jpg","href":""},{"type":2,"height":18},{"type":1,"txt":"一段文字一段文字一段文字一段文字","txt_en":"The cold resistance of the battery is outstanding","color":"#000","fontSize":34,"fontWeight":"bold","decoration":2},{"type":1,"txt":"一段文字一段文字一段文字一段文字","txt_en":"At low temperatures, the drone’s battery is key. KEEL Pro uses the most cutting-edge high energy rate battery, 18S 84Ah large capacity, compared to previous tests, the battery life increased by 35%, in line with research and development expectations, the test battery also maintained good working condition.","color":"#000","fontSize":25,"fontWeight":"normal","decoration":1},{"type":2,"height":27},{"type":3,"src":"03-电池.jpg","href":""},{"type":6,"height":1100,"widget":[{"type":1,"txt":"这块电池简直堪称行业典范！它不仅续航能力惊人，长时间使用不断电，而且充电迅速，性能稳定，时刻为设备提供可靠能源保障。","txt_en":"This battery is simply a model in the industry! It not only has amazing battery life, lasting for a long time without powering off, but also charges quickly and has stable performance, providing reliable energy support for devices at all times.","color":"#f00","fontSize":43,"fontWeight":"normal","zIndex":1,"top":70,"left":20,"width":430,"height":850},{"type":2,"src":"03-电池.jpg","href":"","borderRadius":43,"zIndex":1,"top":50,"left":470,"width":600,"height":410},{"type":3,"src":"202412.12测试视频.mp4","borderRadius":0,"zIndex":1,"top":460,"left":470,"width":600,"height":400},{"type":1,"txt":"这块电池简直堪称行业典范！它不仅续航能力惊人，长时间使用不断电，而且充电迅速，性能稳定，时刻为设备提供可靠能源保障。","txt_en":"","color":"#f00","fontSize":37,"fontWeight":"normal","zIndex":1,"top":500,"left":20,"width":430,"height":450},{"type":4,"txt":"快来看看吧！！！！！！！！！！ →","txt_en":"SEEEEEEEEEEEE！！！！！！！！！！→","color":"#fff","backgroundColor":"rgba(16, 218, 127, 1)","href":"//www.baidu.com","fontSize":50,"fontWeight":"bold","borderRadius":60,"zIndex":1,"top":900,"left":0,"width":1100,"height":100}]}]}
+{
+  "id": 1,
+  "cover": "company_news/cover/naga-x4-speed-flight-test.png",
+  "title": "NAGA X4 在飞行测试中速度达到40米/秒",
+  "title_en": "NAGA X4 Speed Reach 40m/s In Flight Test",
+  "timestamp": "2023-07-16T23:29:00.000Z",
+  "tags": {
+    "1": {
+      "zh": "公司新闻",
+      "en": "company news"
+    }
+  },
+  "frame": [
+    {
+      "type": 2,
+      "height": 20
+    },
+    {
+      "type": 4,
+      "src": "company_news/NAGA X4 速度+击落靶机（谨慎发布）.mp4"
+    },
+    {
+      "type": 2,
+      "height": 18
+    },
+    {
+      "type": 1,
+      "txt": "作为一款可靠且卓越的多功能高速无人机，中航通研发的NAGA X4在飞行测试中速度达到了每秒40米。",
+      "txt_en": "The ZHT NAGA X4 as a reliable and excellent multi-functional high speed drone, the speed reached 40 Metre per second in flight test.",
+      "color": "#000",
+      "fontSize": 22,
+      "fontWeight": "normal",
+      "decoration": 0
+    }
+  ]
+}

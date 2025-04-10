@@ -1,1 +1,63 @@
-{"id":2,"cover":"03-电池.jpg","title":"1545646545451321321","title_en":"513511","timestamp":1737407816196,"tags":{"1":{"zh":"公司新闻","en":"company news"}},"frame":[{"type":6,"height":300,"widget":[{"type":3,"src":"202412.12测试视频.mp4","borderRadius":24,"zIndex":5,"top":10,"left":90,"width":460,"height":280},{"type":1,"txt":"xxxxxxx","txt_en":"xxxxx","color":"#f00","fontSize":28,"fontWeight":"normal","zIndex":5,"top":0,"left":110,"width":440,"height":70},{"type":2,"src":"asdf","href":"w","borderRadius":6,"zIndex":6,"top":180,"left":250,"width":200,"height":120},{"type":4,"txt":"了解更多 →","txt_en":"xxxxx ->1","color":"#fff","backgroundColor":"rgba(255, 0, 0, 0.51)","href":"//www.baidu.com","fontSize":56,"fontWeight":"bold","borderRadius":29,"zIndex":7,"top":60,"left":590,"width":360,"height":110},{"type":2,"src":"03-电池.jpg","href":"","borderRadius":0,"zIndex":1,"top":0,"left":0,"width":1130,"height":300},{"type":1,"txt":"xxxxxxx","txt_en":"xxxxx","color":"rgba(42, 252, 0, 1)","fontSize":101,"fontWeight":"normal","zIndex":13,"top":80,"left":740,"width":500,"height":100}]},{"type":2,"height":18},{"type":6,"height":300,"widget":[]},{"type":2,"height":18},{"type":1,"txt":"一段文字一段文字一段文字一段文字","txt_en":"words","color":"#000","fontSize":18,"fontWeight":"normal","decoration":0}]}
+{
+  "id": 2,
+  "cover": "company_news/cover/A Customized KEEL Quadcopter.jpg",
+  "title": "定制版 KEEL 四旋翼无人机",
+  "title_en": "A Customized KEEL Quadcopter",
+  "timestamp": "2023-10-11T09:47:00.000Z",
+  "tags": {
+    "1": {
+      "zh": "公司新闻",
+      "en": "company news"
+    }
+  },
+  "frame": [
+    {
+      "type": 2,
+      "height": 20
+    },
+    {
+      "type": 1,
+      "txt": "这是一批定制的 KEEL 四旋翼无人机订单。与标准化的 KEEL 不同，这款定制版 KEEL 配备了加长的起落架，以便容纳客户的特殊载荷设备，并且起落架进行了加固处理。",
+      "txt_en": "This is a bulk order for customized KEEL quadcopter. Unlike the standardised KEEL, this customized KEEL features an extra long landing gear to accommodate the customer’s special payload equipment. And the landing gear was reinforced.",
+      "color": "#000",
+      "fontSize": 22,
+      "fontWeight": "normal",
+      "decoration": 0
+    },
+    {
+      "type": 2,
+      "height": 18
+    },
+    {
+      "type": 1,
+      "txt": "LM06 空投设备，重约750克，可以挂载六个空投物品，每个空投物品的最大承载重量不超过 3.5 公斤，六个空投单元的总重量不超过 21 公斤。",
+      "txt_en": "LM06 air drop device, self-weight is about 750g, can be mounted six Dropping items, max loading capacity of each dropping item does not exceed 3.5KG, the total of 6 Dropping units does not exceed 21KG.",
+      "color": "#000",
+      "fontSize": 22,
+      "fontWeight": "normal",
+      "decoration": 0
+    },
+    {
+      "type": 2,
+      "height": 18
+    },
+    {
+      "type": 3,
+      "src": "company_news/cover/A Customized KEEL Quadcopter.jpg",
+      "href": ""
+    },
+    {
+      "type": 2,
+      "height": 18
+    },
+    {
+      "type": 1,
+      "txt": "ZHT-8RB 是一款 360x 混合变焦夜视测距相机，支持上方安装，具有 2.07M 像素和 1800 米激光测距能力。它广泛应用于巡查监察、交通监控、安全防护等领域。",
+      "txt_en": "ZHT-8RB is a 360x hybrid zoom night vision ranging camera, supports upper mounted. 2.07M pixels, 1800m laser range. It is widely used in inspection, traffic monitoring, security and other fields.",
+      "color": "#000",
+      "fontSize": 22,
+      "fontWeight": "normal",
+      "decoration": 0
+    }
+  ]
+}

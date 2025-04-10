@@ -4,7 +4,7 @@
         <div class="bigMountain">
             <div class="mask">
                 <h1>
-                    <lan en="关于我们" zh="关于我们" />
+                    <lan en="About Us" zh="关于我们" />
                 </h1>
             </div>
         </div>

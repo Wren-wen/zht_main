@@ -1,116 +1,126 @@
 <template>
     <div class="Pop_b">
-        <div class="container">
-            <div class="bar one">
-                <div class="bar four">
-                    <h1>
-                        <lan en="KEEL系列" zh="KEEL系列" />
-                    </h1>
-                    <span class="tip">
-                        <lan en="10-100公斤级动力方案" zh="10-100公斤级动力方案" />
+        <div class="wrapper">
+            <div class="container">
+                <div class="bar one">
+                    <div class="bar four">
+                        <h1>
+                            <lan en="KEEL series" zh="KEEL系列" />
+                        </h1>
+                        <span class="tip" style="marginLeft: 1rem;">
+                            <lan en="0-160kg payload solution" zh="0-160公斤负载方案" />
+                        </span>
+                    </div>
+                    <span class="tip mid">
+                        <lan en="Modular design · One drone for a variety of applications" zh="模块化设计 · 一机应百变" />
                     </span>
                 </div>
-                <span class="tip">
-                    <lan en="模块化设计 · 一机应百变" zh="模块化设计 · 一机应百变" />
-                </span>
+                <div class="list">
+                    <div class="item one">
+                        <div class="bar two">
+                            <h2>
+                                <lan en="KEEL" zh="KEEL" />
+                            </h2>
+                        </div>
+                        <img class="one" src="@/assets/目录/system/KEEL.jpg" alt="">
+                    </div>
+                    <div class="item one">
+                        <div class="bar two">
+                            <h2>
+                                <lan en="KEEL MINI" zh="KEEL MINI" />
+                            </h2>
+                        </div>
+                        <img class="one" src="@/assets/目录/system/KEEL_MINI.jpg" alt="">
+                    </div>
+                    <div class="item one">
+                        <div class="bar two">
+                            <h2>
+                                <lan en="KEEL PLUS" zh="KEEL PLUS" />
+                            </h2>
+                        </div>
+                        <img class="one" src="@/assets/目录/system/KEEL_PLUS.jpg" alt="">
+                    </div>
+                </div>
+                <div class="list">
+                    <div class="item two">
+                        <div class="bar two">
+                            <h2>
+                                <lan en="KEEL PRO" zh="KEEL PRO" />
+                            </h2>
+                        </div>
+                        <img class="two" src="@/assets/目录/system/KEEL_PRO.jpg" alt="">
+                    </div>
+                    <div class="item one">
+                        <div class="bar two">
+                            <h2>
+                                <lan en="KEEL MAX" zh="KEEL MAX" />
+                            </h2>
+                            <h3>
+                                <!-- <lan en="30-100公斤级动力方案" zh="30-100公斤级动力方案" /> -->
+                            </h3>
+                        </div>
+                        <img class="two" src="@/assets/目录/system/KEEL_MAX.jpg" alt="">
+                    </div>
+                </div>
             </div>
-            <div class="list">
+            <div class="container two">
+                <div class="bar three">
+                    <h1>
+                        <lan en="NAGA series" zh="NAGA系列" />
+                    </h1>
+                    <span class="tip two">
+                        <lan en="0-8kg payload solution" zh="0-8公斤负载方案" />
+                    </span>
+                </div>
                 <div class="item one">
                     <div class="bar two">
                         <h2>
-                            <lan en="KEEL" zh="KEEL" />
+                            <lan en="NAGA X4" zh="NAGA X4" />
                         </h2>
                     </div>
-                    <img class="one" src="@/assets/比例图/350x220.png" alt="">
+                    <img class="three" src="@/assets/目录/system/NAGA_X4.jpg" alt="">
                 </div>
                 <div class="item one">
                     <div class="bar two">
                         <h2>
-                            <lan en="KEEL MINI" zh="KEEL MINI" />
+                            <lan en="NAGA X8" zh="NAGA X8" />
                         </h2>
                     </div>
-                    <img class="one" src="@/assets/比例图/350x220.png" alt="">
+                    <img class="three" src="@/assets/目录/system/NAGA_X8.jpg" alt="">
                 </div>
-                <div class="item one">
-                    <div class="bar two">
-                        <h2>
-                            <lan en="KEEL PLUS" zh="KEEL PLUS" />
-                        </h2>
-                    </div>
-                    <img class="one" src="@/assets/比例图/350x220.png" alt="">
-                </div>
-            </div>
-            <div class="list">
-                <div class="item two">
-                    <div class="bar two">
-                        <h2>
-                            <lan en="KEEL PRO" zh="KEEL PRO" />
-                        </h2>
-                    </div>
-                    <img class="two" src="@/assets/比例图/540x220.png" alt="">
-                </div>
-                <div class="item one">
-                    <div class="bar two">
-                        <h2>
-                            <lan en="KEEL MAX" zh="KEEL MAX" />
-                        </h2>
-                        <h3>
-                            <!-- <lan en="30-100公斤级动力方案" zh="30-100公斤级动力方案" /> -->
-                        </h3>
-                    </div>
-                    <img class="two" src="@/assets/比例图/540x220.png" alt="">
-                </div>
-            </div>
-        </div>
-        <div class="container two">
-            <div class="bar three">
-                <h1>
-                    <lan en="NAGA系列" zh="NAGA系列" />
-                </h1>
-                <span class="tip two">
-                    <lan en="3-8公斤级动力方案" zh="3-8公斤级动力方案" />
-                </span>
-            </div>
-            <div class="item one">
-                <div class="bar two">
-                    <h2>
-                        <lan en="NAGA X4" zh="NAGA X4" />
-                    </h2>
-                </div>
-                <img class="one" src="@/assets/比例图/350x220.png" alt="">
-            </div>
-            <div class="item one">
-                <div class="bar two">
-                    <h2>
-                        <lan en="NAGA X8" zh="NAGA X8" />
-                    </h2>
-                </div>
-                <img class="one" src="@/assets/比例图/350x220.png" alt="">
             </div>
         </div>
     </div>
 </template>
 
 <script setup>
-import { ref, reactive, onMounted, } from 'vue'
+import { ref, reactive, onMounted, inject } from 'vue'
+let isZh = inject('isZh');
 
 </script>
 
 <style lang="less" scoped>
 .Pop_b {
-    height: 800px;
-    padding: 0px 0px 40px 134px;
+    height: 830px;
+    padding: 0px 0px 40px 0;
     display: flex;
+    background-color: #dcdcdc;
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    // justify-content: space-between;
 }
 
 .container.two {
-    margin-left: 170px;
+    margin-left: 120px;
 }
 
 .bar {
@@ -119,12 +129,11 @@ import { ref, reactive, onMounted, } from 'vue'
     align-items: flex-end;
     align-items: center;
     font-size: 20px;
-    height: 100px;
+    height: 60px;
     display: flex;
     align-items: center;
 }
 .bar.four{
-    width: 355px;
 
 }
 .list {
@@ -141,12 +150,12 @@ import { ref, reactive, onMounted, } from 'vue'
     ::after {
         content: "";
         position: absolute; 
-        left: -134px;
+        left: -2000px;
         overflow-x: hidden;
         bottom: 0; 
-        width: 100vw;
+        width: 2000vw;
         height: 3px; 
-        background-color: #f4f4f4;
+        background-color: #bebebe;
     }
 }
 
@@ -155,13 +164,22 @@ import { ref, reactive, onMounted, } from 'vue'
 }
 
 img.one {
-    width: 355px;
-    height: 220px;
+    width: 280px;
+    height: 240px;
+}
+ 
+img.two {
+    width: 445px;
+    height: 350px;
 }
 
-img.two {
-    width: 540px;
-    height: 240px;
+img.three {
+    width: 350px;
+    height: 295px;
+}
+
+img {
+    border-radius: 12px;
 }
 
 h1,
@@ -186,5 +204,11 @@ h3.two {
     font-size: 20px;
     font-weight: 1;
     color: #9a9a9a;
+}
+
+.tip.mid {
+    font-size: v-bind("isZh ? '1.25rem' : '0.9375rem'");
+    color: v-bind("isZh ? '#9a9a9a' : '#5e5c5d'");
+    font-weight: v-bind("isZh ? '100': '700'");
 }
 </style>

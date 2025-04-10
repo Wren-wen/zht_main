@@ -24,7 +24,7 @@
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container" v-if="!isFrame">
         <div class="content">
             <div class="page1">
                 <div class="pleft">
@@ -83,6 +83,9 @@
             </popup-any>
         </div>
     </div>
+    <div class="frame-container" v-else>
+
+    </div>
     <div class="return-top" @click="scrollToTop">
         <svg class="icon" aria-hidden="true">
             <use xlink:href="#icon-top"></use>
@@ -100,7 +103,7 @@ const route = useRoute()
 const router = useRouter()
 const store = useStore()
 
-const props = defineProps(['product'])
+const props = defineProps(['product', 'isFrame'])
 
 const imgidx = ref(0)
 

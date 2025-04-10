@@ -1,16 +1,16 @@
 <template>
     <div class="Pop_e flex column">
         <router-link :to="{name:'news',query:{...route.query}}" class="item nowrap flex center nose pointer">
-            <lan en="新闻动态" zh="新闻动态" />
+            <lan en="News trends" zh="新闻动态" />
         </router-link>
         <router-link :to="{name:'introduction',query:{...route.query}}" class="item nowrap flex center nose pointer">
-            <lan en="公司介绍" zh="公司介绍" />
+            <lan en="Company" zh="公司介绍" />
         </router-link>
         <router-link :to="{name:'contact',query:{...route.query}}" class="item nowrap flex center nose pointer">
-            <lan en="联系我们" zh="联系我们" />
+            <lan en="Contact us" zh="联系我们" />
         </router-link>
         <router-link :to="{name:'declaration',query:{...route.query}}" class="item nowrap flex center nose pointer">
-            <lan en="声明" zh="声明" />
+            <lan en="Statement" zh="声明" />
         </router-link>
     </div>
 </template>
@@ -29,6 +29,7 @@ const router = useRouter()
 .Pop_e{
     /* width: 140px; */
     padding: 10px 0;
+    background-color: #dcdcdc;
 }
 .item{
     width: 100%;

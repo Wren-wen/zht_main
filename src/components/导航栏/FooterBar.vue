@@ -5,7 +5,7 @@
                 <div class="basic-info">
                     <div class="title-logo-wrapper">
                         <div class="title">
-                            <lan en="联系我们" zh="联系我们" />
+                            <lan en="Contact Us" zh="联系我们" />
                         </div>
                         <div class="logo">
                             <img src="@/assets/logo.png" alt="">
@@ -20,33 +20,37 @@
                         </div>
                         <div class="addr">
                             <span>Add.:</span>
-                            <lan en="天津市津南区八里台工业园区天津大学创新研究院" />
+                            <lan en="Tianjin University Innovation Research Institute, " zh="天津市津南区八里台工业园区天津大学创新研究院"/>
+                            <template v-if="!isZh">
+                                <br>
+                                <span style="display: inline-block; paddingTop: 4px;">Balital Industrial Park, Jinnan District, Tianjin, China</span>
+                            </template>
                         </div>
                     </div>
                 </div>
                 <div class="sep-line"></div>
                 <div class="outer-link">
-                    <div class="outer-item wechat">
+                    <div class="outer-item wechat" @mouseenter="isShowWechat=true" @mouseleave="isShowWechat=false">
                         <svg class="icon" aria-hidden="true">
                             <use xlink:href="#icon-wechat-fill"></use>
                         </svg>
                     </div>
-                    <div class="outer-item bilibili">
+                    <div class="outer-item bilibili" @click="jumpToOuter(OuterLink.BILIBILI)">
                         <svg class="icon" aria-hidden="true">
                             <use xlink:href="#icon-bilibili-line"></use>
                         </svg>                        
                     </div>
-                    <div class="outer-item youtube">
+                    <div class="outer-item youtube" @click="jumpToOuter(OuterLink.YOUTUBE)">
                         <svg class="icon" aria-hidden="true">
                             <use xlink:href="#icon-Youtube-fill"></use>
                         </svg>
                     </div>
-                    <div class="outer-item facebook">
+                    <div class="outer-item facebook" @click="jumpToOuter(OuterLink.FACEBOOK)">
                         <svg class="icon" aria-hidden="true">
                             <use xlink:href="#icon-facebook"></use>
                         </svg>
                     </div>
-                    <div class="outer-item linkedin">
+                    <div class="outer-item linkedin" @click="jumpToOuter(OuterLink.LINKEDIN)">
                         <svg class="icon" aria-hidden="true">
                             <use xlink:href="#icon-linkedin"></use>
                         </svg>
@@ -55,7 +59,7 @@
             </div>
             <div class="drone-frame">
                 <div class="title">
-                    <lan en="无人机机架" zh="无人机机架" />
+                    <lan en="Drone Frame" zh="无人机机架" />
                 </div>
                 <div class="sep-line"></div>
                 <div class="product-list">
@@ -66,13 +70,13 @@
             </div>
             <div class="power-solution">
                 <div class="title">
-                    <lan en="无人机动力方案" zh="无人机动力方案" />
+                    <lan en="Drone System" zh="无人机动力方案" />
                 </div>
                 <div class="sep-line"></div>
                 <div class="two-column">
                     <div class="left">
                         <div class="sub-title">
-                            <lan en="KEEL系列 10-100kg" zh="KEEL系列 10-100kg" />
+                            <lan en="KEEL series 0-160kg" zh="KEEL系列 0-160kg" />
                         </div>
                         <div class="product-list">
                             <div class="product-link" v-for="(item, index) in keelList" :key="index">
@@ -82,7 +86,7 @@
                     </div>
                     <div class="right">
                         <div class="sub-title">
-                            <lan en="NAGA系列 3-8kg" zh="NAGA系列 308kg" />
+                            <lan en="NAGA series 0-8kg" zh="NAGA系列 0-8kg" />
                         </div>
                         <div class="product-list">
                             <div class="product-link" v-for="(item, index) in nagaList" :key="index">
@@ -94,7 +98,7 @@
             </div>
             <div class="accessory">
                 <div class="title">
-                    <lan en="配套专区" zh="配套专区" />
+                    <lan en="Accessories" zh="配套专区" />
                 </div>
                 <div class="sep-line"></div>
                 <div class="page-list">
@@ -105,7 +109,7 @@
             </div>
             <div class="service-support">
                 <div class="title">
-                    <lan en="服务与支持" zh="服务与支持" />
+                    <lan en="Service and Support" zh="服务与支持" />
                 </div>
                 <div class="sep-line"></div>
                 <div class="page-list">
@@ -116,7 +120,7 @@
             </div>
             <div class="about-us">
                 <div class="title">
-                    <lan en="关于我们" zh="关于我们" />
+                    <lan en="About Us" zh="关于我们" />
                 </div>
                 <div class="sep-line"></div>
                 <div class="page-list">
@@ -128,13 +132,14 @@
         </div>
         <div class="copyright">
             <span>Copyright © 2025 </span>
-            <lan en="中航通创新（天津）科技发展有限公司" zh="中航通创新（天津）科技发展有限公司" />
+            <lan en="Technology Co., Ltd." zh="中航通创新（天津）科技发展有限公司" />
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, inject, computed, watch } from "vue";
+import { OuterLink } from "@/utils/enums";
 
 type LinkItem = {
     name: String;
@@ -142,6 +147,9 @@ type LinkItem = {
     url: String;
 };
 
+let isZh = inject('isZh');
+let isShowWechat = ref(false);
+let wechatDisplay = computed(() => isShowWechat.value ? 'block' : 'none')
 
 let frameList = ref<LinkItem[]>(
     [
@@ -198,23 +206,33 @@ let nagaList = ref<LinkItem[]>(
 let accessoryList = ref<LinkItem[]>(
     [
         {
+            en: 'Power System',
             name: '动力系统',
-            en: '动力系统',
             url: '',
         },
         {
+            en: 'Flight Control System',
             name: '飞行控制系统',
-            en: '飞行控制系统',
             url: '',
         },
         {
+            en: 'Link',
+            name: '链路',
+            url: '',
+        },
+        {
+            en: 'Power Management',
+            name: '电源管理',
+            url: '',
+        },
+        {
+            en: 'Payload Equipment',
             name: '载荷设备',
-            en: '载荷设备',
             url: '',
         },
         {
+            en: 'Other',
             name: '其他',
-            en: '其他',
             url: '',
         }
     ]
@@ -223,27 +241,27 @@ let servList = ref<LinkItem[]>(
     [
         {
             name: '资料下载',
-            en: '资料下载',
+            en: 'Download',
             url: '',
         },
         {
             name: '图库中心',
-            en: '图库中心',
+            en: 'Gallery center',
             url: '',
         },
         {
             name: '视频中心',
-            en: '视频中心',
+            en: 'Video center',
             url: '',
         },
         {
             name: '常见问题',
-            en: '常见问题',
+            en: 'Q&A',
             url: '',
         },
         {
             name: '售后咨询',
-            en: '售后咨询',
+            en: 'After-sales',
             url: '',
         }
     ]
@@ -252,26 +270,30 @@ let aboutList = ref<LinkItem[]>(
     [
         {
             name: '新闻动态',
-            en: '新闻动态',
+            en: 'News trends',
             url: '',
         },
         {
             name: '公司介绍',
-            en: '公司介绍',
+            en: 'Company',
             url: '',
         },
         {
             name: '加入我们',
-            en: '加入我们',
+            en: 'Contact us',
             url: '',
         },
         {
             name: '声明',
-            en: '声明',
+            en: 'Statement',
             url: '',
         }
     ]
 )
+
+const jumpToOuter = (link: string) => {
+    window.open(link)
+}
 
 </script>
 
@@ -347,6 +369,21 @@ let aboutList = ref<LinkItem[]>(
                         width: 100%;
                         height: 100%;
                     }
+                }
+                .wechat {
+                    position: relative;
+                }
+                .wechat::before {
+                    content: "";
+                    position: absolute;
+                    display: v-bind(wechatDisplay);
+                    width: 120px;
+                    height: 120px;
+                    top: 100%;
+                    background-image: url("../../assets/WeChat.png");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    transform: translateX(-20%);
                 }
             }
         }

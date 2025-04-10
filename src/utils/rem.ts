@@ -101,11 +101,12 @@ function setRem1() {
     htmlDom.style.fontSize = (16 * htmlWidth) / (whichFigma.width/whichFigma.fontScale) + "px";
 }
 function setup(){
-    if(REM_TYPE === 0){
-        setRem();
-    }else if(REM_TYPE === 1){
-        setRem1();
-    }
+    // if(REM_TYPE === 0){
+    //     setRem();
+    // }else if(REM_TYPE === 1){
+    //     setRem1();
+    // }
+    setRem1();
 }
 // 初始化
 setup();

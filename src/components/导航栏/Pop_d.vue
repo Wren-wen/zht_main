@@ -1,19 +1,19 @@
 <template>
     <div class="Pop_d flex column">
         <router-link :to="{name:'assets',query:{...route.query}}" class="item nowrap flex center nose pointer">
-            <lan en="资料下载" zh="资料下载" />
+            <lan en="Download" zh="资料下载" />
         </router-link>
         <router-link :to="{name:'picture',query:{...route.query}}" class="item nowrap flex center nose pointer">
-            <lan en="图库中心" zh="图库中心" />
+            <lan en="Gallery center" zh="图库中心" />
         </router-link>
         <router-link :to="{name:'videoCenter',query:{...route.query}}" class="item nowrap flex center nose pointer">
-            <lan en="视频中心" zh="视频中心" />
+            <lan en="Video center" zh="视频中心" />
         </router-link>
         <router-link :to="{name:'question',query:{...route.query}}" class="item nowrap flex center nose pointer">
-            <lan en="常见问题" zh="常见问题" />
+            <lan en="Q & A" zh="常见问题" />
         </router-link>
         <router-link :to="{name:'afterSale',query:{...route.query}}" class="item nowrap flex center nose pointer">
-            <lan en="售后咨询" zh="售后咨询" />
+            <lan en="After-sales" zh="售后咨询" />
         </router-link>
     </div>
 </template>
@@ -32,6 +32,7 @@ const router = useRouter()
 .Pop_d{
     /* width: 140px; */
     padding: 10px 0;
+    background-color: #dcdcdc;
 }
 .item{
     width: 100%;

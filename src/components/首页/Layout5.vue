@@ -1,20 +1,9 @@
 <template>
     <div class="Layout5">
-        <img class="cover" src="@/assets/轮播图/5.png" alt="">
         <div class="ui">
-            <img class="logo" src="@/assets/logo.png" alt="">
-            <h1>
-                <lan en="专注于无人机研发设计和集成化解决方案" zh="专注于无人机研发设计和集成化解决方案" />
-            </h1>
-            <div class="bar">
-                <div class="item" v-for="i in 4">
-                    <img src="@/assets/首页/test.png" alt="">
-                    <h3><lan en="模块化理念" zh="模块化理念" /></h3>
-                </div>
-            </div>
-            <div class="btn">
+            <div class="btn" @click="router.push({ name: 'introduction' })">
                 <div>
-                    <lan en="公司介绍" zh="公司介绍" />
+                    <lan en="Company Introduction" zh="公司介绍" />
                 </div>
                 <div class="triangle">▶</div>
             </div>
@@ -23,16 +12,29 @@
 </template>
 
 <script setup>
-import { ref, reactive, onMounted, } from 'vue'
+import { ref, reactive, onMounted, inject, watch } from 'vue'
+import pubuse from '@/utils/pub-use'
+import { useRouter } from 'vue-router'
 
+const router = useRouter()
 
+let isZh = inject('isZh');
+let path = ref("url(" + pubuse('首页/intro/公司介绍_EN.jpg') + ")");
+
+watch(isZh, (newVal) => {
+    path.value = newVal ? "url(" + pubuse('首页/intro/公司介绍_CN.jpg') + ")" : "url(" + pubuse('首页/intro/公司介绍_EN.jpg') + ")";
+})
+
+onMounted(() => {
+    
+})
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 .Layout5 {
     height: 950px;
     width: 100%;
-    margin: 180px 0 0 0;
+    margin: 60px 0 0 0;
     position: relative;
 }
 
@@ -42,16 +44,13 @@ import { ref, reactive, onMounted, } from 'vue'
 }
 
 .ui {
-    position: absolute;
-    top: 160px;
-    bottom: 240px;
-    /* width: 100%; */
-    left: 50%;
-    transform: translateX(-50%);
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-size: 100% 100%;
+    background-image: v-bind(path);
 }
 
 .logo {
@@ -90,15 +89,18 @@ h3{
 }
 
 .btn {
+    position: relative;
+    bottom: 60px;
+    right: 100px;
     display: inline-flex;
     align-items: center;
     background-color: #ff1215;
     color: #fffeff;
     text-align: center;
-    letter-spacing: 2px;
+    letter-spacing: 0.8px;
     font-size: 25px;
-    border-radius: 12px;
-    padding: 0 14px;
+    border-radius: 18px;
+    padding: 4px 14px;
     cursor: pointer;
     margin-top: 300px;
     .triangle {

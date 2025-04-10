@@ -113,7 +113,7 @@
 
 <script setup>
 import { ref, toRaw, onMounted, computed, inject, toRef, watch } from 'vue'
-import { getArticle } from '@/api/configuration/product'
+import { getProduct } from '@/api/configuration/product'
 import download_json from '@/hooks/configuration/download_json'
 
 const opt = inject('opt')
@@ -152,7 +152,7 @@ onMounted(() => {
     // console.log(article_edit,info_article_edit);
 
     if (!article_edit.value?.id) {
-        getArticle(opt.id_selected).then(res => {
+        getProduct(opt.id_selected).then(res => {
             article_edit.value = res
 
         }).catch(e => {

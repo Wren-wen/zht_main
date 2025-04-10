@@ -14,7 +14,7 @@
 
 <script setup>
 import { ref, toRef, reactive, onUnmounted, inject, watch, computed } from 'vue'
-import { getArticle } from '@/api/configuration/product'
+import { getProduct } from '@/api/configuration/product'
 
 const props = defineProps(['value'])
 const opt = inject('opt')
@@ -30,7 +30,7 @@ const trigger = (op, immediate = false) => {
     } else {
         clearInterval(inter)
         const interFn = () => {
-            getArticle(props.value.id).then(res => {
+            getProduct(props.value.id).then(res => {
                 article_reload.value = res
             }).catch(err => {
                 // ElMessage.error(err.message)

@@ -1,8 +1,8 @@
-import { createRouter, createWebHashHistory } from "vue-router";
+import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
 import { getToken, getAdmin, removeAdmin } from "@/utils/auth";
 // import { ElMessage } from "element-plus";
 
-const routes = [
+const routes: RouteRecordRaw[] = [
     {
         name: "home",
         path: "/",
@@ -80,6 +80,7 @@ const routes = [
     {
         name: "aboutus",
         path: "/aboutus",
+        redirect: "/aboutus/news",
         component: () => import("@/views/aboutus.vue"),
         children: [
             {
