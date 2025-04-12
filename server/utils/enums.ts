@@ -10,3 +10,9 @@ export enum FILE_TYPE {
     PRODUCT = 'product',
     INDEX = 'index'
 }
+
+export enum UPDATE_INFO {
+    SUCCESS = 'ok',
+    NO_MATCH = 'number of matched data is 0',
+    NOT_RECV = 'db server did not receive operation'
+}

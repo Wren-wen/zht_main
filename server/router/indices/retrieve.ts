@@ -13,7 +13,7 @@ const retrieveIndices = async (req: Request, res: Response) => {
 
     const indicesModel = useIndicesModel()
     const body = req.body
-    const id = ('id' in body) ? body.id : -1
+    const id = ('id' in body) ? body.id : ""
 
     let indices = await indicesModel.retrieveAllIndices(body.fileType, id)
     if (indices == null) {
