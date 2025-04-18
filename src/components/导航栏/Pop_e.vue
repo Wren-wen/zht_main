@@ -6,8 +6,8 @@
         <router-link :to="{name:'introduction',query:{...route.query}}" class="item nowrap flex center nose pointer">
             <lan en="Company" zh="公司介绍" />
         </router-link>
-        <router-link :to="{name:'contact',query:{...route.query}}" class="item nowrap flex center nose pointer">
-            <lan en="Contact us" zh="联系我们" />
+        <router-link :to="{name:'message',query:{...route.query}}" class="item nowrap flex center nose pointer">
+            <lan en="Leave a message" zh="留言窗口" />
         </router-link>
         <router-link :to="{name:'declaration',query:{...route.query}}" class="item nowrap flex center nose pointer">
             <lan en="Statement" zh="声明" />

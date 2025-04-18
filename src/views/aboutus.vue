@@ -1,13 +1,13 @@
 <template>
     <div class="aboutus">
         <!-- 子路由 -->
-        <div class="bigMountain">
+        <!-- <div class="bigMountain">
             <div class="mask">
                 <h1>
                     <lan en="About Us" zh="关于我们" />
                 </h1>
             </div>
-        </div>
+        </div> -->
         <router-view></router-view>
     </div>
 </template>
@@ -23,7 +23,7 @@ import { ref, reactive, onMounted, } from 'vue'
     width: 100%;
     position: relative;
 }
-@keyframes dashan {
+/* @keyframes dashan {
     from{
         background-size: 130% ;
     }
@@ -35,7 +35,6 @@ import { ref, reactive, onMounted, } from 'vue'
     width: 100%;
     height: 400px;
     background: url('@/assets/大山/mountain.png') no-repeat center center / cover;
-    /* 执行一次动画 */
     animation: dashan 5.5s linear;
 }
 .mask{
@@ -49,5 +48,5 @@ import { ref, reactive, onMounted, } from 'vue'
 h1{
     color: white;
     font-size: 56px;
-}
+} */
 </style>

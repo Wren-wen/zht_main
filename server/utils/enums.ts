@@ -16,3 +16,16 @@ export enum UPDATE_INFO {
     NO_MATCH = 'number of matched data is 0',
     NOT_RECV = 'db server did not receive operation'
 }
+
+export enum KEEL_TAG {
+    KEEL,
+    KEEL_MINI,
+    KEEL_PLUS,
+    KEEL_PRO,
+    KEEL_MAX
+}
+
+export enum FILE_EXT {
+    PDF = 'PDF',
+    ZIP = 'ZIP'
+}

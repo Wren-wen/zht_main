@@ -88,7 +88,8 @@ const uploadFile = async (req: Request, res: Response) => {
             code: 200,
             msg: 'ok',
             data: {
-                path: rspPath
+                path: rspPath,
+                id: fileId,
             }
         })
     } else {

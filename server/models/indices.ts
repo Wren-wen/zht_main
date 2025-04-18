@@ -29,7 +29,7 @@ const genEmptyIndices = (): IndicesReq => {
     }
 }
 
-const indicesSchema = new Schema({
+const articleIndicesSchema = new Schema({
     cover: String,
     title: String,
     title_en: String,
@@ -43,9 +43,37 @@ const indicesSchema = new Schema({
     ]
 }, { versionKey: false })
 
-const ArticleIndices = mongoose.model('ArticleIndices', indicesSchema)
-const PictureIndices = mongoose.model('PictureIndices', indicesSchema)
-const ProductIndices = mongoose.model('ProductIndices', indicesSchema)
+const pictureIndicesSchema = new Schema({
+    cover: String,
+    title: String,
+    title_en: String,
+    timestamp: String,
+    tags: [
+        {
+            zh: String,
+            en: String,
+            _id: false
+        }
+    ]
+}, { versionKey: false })
+
+const productIndicesSchema = new Schema({
+    cover: String,
+    title: String,
+    title_en: String,
+    timestamp: String,
+    path: [
+        {
+            zh: String,
+            en: String,
+            _id: false
+        }
+    ]
+}, { versionKey: false })
+
+const ArticleIndices = mongoose.model('ArticleIndices', articleIndicesSchema)
+const PictureIndices = mongoose.model('PictureIndices', pictureIndicesSchema)
+const ProductIndices = mongoose.model('ProductIndices', productIndicesSchema)
 
 class IndicesModel {
     art: typeof ArticleIndices

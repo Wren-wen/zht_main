@@ -104,11 +104,11 @@ const routes: RouteRecordRaw[] = [
                 },
             },
             {
-                name: "contact",
-                path: "/aboutus/contact",
-                component: () => import("@/views/aboutus/contact.vue"),
+                name: "message",
+                path: "/aboutus/message",
+                component: () => import("@/views/aboutus/message.vue"),
                 meta: {
-                    title: "contact",
+                    title: "message",
                     requireAuth: false,
                     isAdmin: false,
                 },

@@ -1,6 +1,7 @@
 import type { Request, Response } from "express"
 
 import { useIndicesModel } from "@/models/indices"
+import { FILE_TYPE } from "@/utils/enums"
 
 const retrieveIndices = async (req: Request, res: Response) => {
     if (req.method !== 'GET') {
@@ -12,10 +13,10 @@ const retrieveIndices = async (req: Request, res: Response) => {
     }
 
     const indicesModel = useIndicesModel()
-    const body = req.body
-    const id = ('id' in body) ? body.id : ""
+    const query = req.query
+    const id = ('id' in query) ? query.id : ""
 
-    let indices = await indicesModel.retrieveAllIndices(body.fileType, id)
+    let indices = await indicesModel.retrieveAllIndices(query.fileType as FILE_TYPE, id as string)
     if (indices == null) {
         res.status(202).json({
             code: 202,

@@ -113,7 +113,7 @@
                 </div>
                 <div class="sep-line"></div>
                 <div class="page-list">
-                    <div class="page-link" v-for="(item, index) in servList" :key="index">
+                    <div class="page-link" v-for="(item, index) in servList" @click="router.push(item.url as string)" :key="index">
                         <lan :en="item.en" :zh="item.name" />
                     </div>
                 </div>
@@ -124,7 +124,7 @@
                 </div>
                 <div class="sep-line"></div>
                 <div class="page-list">
-                    <div class="page-link" v-for="(item, index) in aboutList" :key="index">
+                    <div class="page-link" v-for="(item, index) in aboutList" @click="router.push(item.url as string)" :key="index">
                         <lan :en="item.en" :zh="item.name" />
                     </div>
                 </div>
@@ -140,6 +140,7 @@
 <script setup lang="ts">
 import { ref, inject, computed, watch } from "vue";
 import { OuterLink } from "@/utils/enums";
+import { useRouter } from "vue-router";
 
 type LinkItem = {
     name: String;
@@ -147,9 +148,11 @@ type LinkItem = {
     url: String;
 };
 
+const router = useRouter();
+
 let isZh = inject('isZh');
 let isShowWechat = ref(false);
-let wechatDisplay = computed(() => isShowWechat.value ? 'block' : 'none')
+let wechatDisplay = computed(() => isShowWechat.value ? 'block' : 'none');
 
 let frameList = ref<LinkItem[]>(
     [
@@ -242,27 +245,27 @@ let servList = ref<LinkItem[]>(
         {
             name: '资料下载',
             en: 'Download',
-            url: '',
+            url: '/serve/assets',
         },
         {
             name: '图库中心',
             en: 'Gallery center',
-            url: '',
+            url: '/serve/picture',
         },
         {
             name: '视频中心',
             en: 'Video center',
-            url: '',
+            url: '/serve/videoCenter',
         },
         {
             name: '常见问题',
             en: 'Q&A',
-            url: '',
+            url: '/serve/question',
         },
         {
             name: '售后咨询',
             en: 'After-sales',
-            url: '',
+            url: '/serve/afterSale',
         }
     ]
 );
@@ -271,22 +274,22 @@ let aboutList = ref<LinkItem[]>(
         {
             name: '新闻动态',
             en: 'News trends',
-            url: '',
+            url: '/aboutus/news',
         },
         {
             name: '公司介绍',
             en: 'Company',
-            url: '',
+            url: '/aboutus/introduction',
         },
         {
-            name: '加入我们',
-            en: 'Contact us',
-            url: '',
+            name: '留言窗口',
+            en: 'Leave a message',
+            url: '/aboutus/message',
         },
         {
             name: '声明',
             en: 'Statement',
-            url: '',
+            url: '/aboutus/declaration',
         }
     ]
 )

@@ -9,14 +9,15 @@ import indicesRouter from "./indices"
 
 const _app = express()
 
-_app.use(cors({
-    origin: [
-        "https://www.zhtaero.com",
-        "https://deploy.zhtaero.com",
-        Number(process.env.NODE_ENV) == ENV.DEV ? '*' : ''
-    ],
-    methods: ['GET', 'POST', 'PUT', 'DELETE']
-}))
+_app.use(cors())
+// _app.use(cors({
+//     origin: [
+//         Number(process.env.NODE_ENV) == ENV.DEV ? '*' : '*',
+//         "https://www.zhtaero.com",
+//         "https://deploy.zhtaero.com",
+//     ],
+//     methods: ['GET', 'POST', 'PUT', 'DELETE']
+// }))
 _app.use(express.json({ limit: '500mb' }))
 _app.use(express.urlencoded({ limit: '500mb', extended: true }))
 _app.use('/main', express.static('static', {

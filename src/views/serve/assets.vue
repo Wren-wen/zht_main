@@ -1,7 +1,7 @@
 <template>
     <div class="assets">
         <div class="title">
-            <lan en="资料下载" zh="资料下载" />
+            <lan en="Download" zh="资料下载" />
         </div>
         <div class="container">
             <div class="tabbar">
@@ -14,21 +14,35 @@
                 </div>
             </div>
             <div class="content">
-                <div class="item" v-for="item in data">
-                    <div class="cover">
-                        <img :src="`configuration/image_bed/${item?.cover?.src}`" alt="">
+                <div class="wrapper">
+                    <div class="list-title">
+                        <lan en="Document" zh="文档" />
                     </div>
-                    <div class="botbox">
-                        <div @click="0" class="btn">
-                            <lan en="在线观看" zh="在线观看" />
-                        </div>
-                        <div @click="0" class="btn">
-                            <lan en="下载" zh="下载" />
+                    <div class="sep-line"></div>
+                    <div class="document-list">
+                        <div class="document">
+                            <div class="name">
+                                <span>UniRC 7 系列用户手册v1.2</span>
+                            </div>
+                            <div class="date">
+                                <span>2025-03-12</span>
+                            </div>
+                            <div class="operation-wrapper">
+                                <div class="file-type">
+                                    <span>PDF</span>
+                                </div>
+                                <div class="download-btn">
+                                    <svg class="icon" aria-hidden="true">
+                                        <use xlink:href="#icon-xiazai"></use>
+                                    </svg>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <footer-bar></footer-bar>
     </div>
 </template>
 
@@ -40,7 +54,7 @@ const tabidx = ref(0)
 const tablist = [
     {
         name: 'KEEL',
-        tag: 1, // 分类id，可自己指定用于筛选类别
+        tag: 0, // 分类id，可自己指定用于筛选类别
     },
     {
         name: 'KEEL MINI',
@@ -48,21 +62,21 @@ const tablist = [
     },
     {
         name: 'KEEL PLUS',
-        tag: 1, // 分类id，可自己指定用于筛选类别
+        tag: 2, // 分类id，可自己指定用于筛选类别
     },
     {
         name: 'KEEL PRO',
-        tag: 1, // 分类id，可自己指定用于筛选类别
+        tag: 3, // 分类id，可自己指定用于筛选类别
     },
     {
         name: 'KEEL MAX',
-        tag: 1, // 分类id，可自己指定用于筛选类别
+        tag: 4, // 分类id，可自己指定用于筛选类别
     },
 ]
 const data = reactive([{}])
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 .assets {
     width: 100%;
 }
@@ -90,14 +104,69 @@ const data = reactive([{}])
 }
 
 .content {
-    min-height: 70vh;
+    // min-height: 70vh;
     width: 100%;
     position: relative;
-    --gap: 30px;
-    padding: 0 calc(150px - var(--gap)/2);
+    // --gap: 30px;
+    // padding: 0 calc(150px - var(--gap)/2);
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
+    // flex-wrap: wrap;
+    // align-items: flex-start;
+    padding: 20px 150px;
+    .wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: #f1f1f1;
+        .list-title {
+            height: 50px;
+            line-height: 50px;
+            font-size: 21px;
+            font-weight: bold;
+            padding-left: 20px;
+        }
+        .sep-line {
+            height: 2px;
+            background-color: #fff;
+        }
+        .document-list {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            .document {
+                display: flex;
+                background-color: #fff;
+                justify-content: space-between;
+                padding: 10px 5px;
+                .name, .operation-wrapper {
+                    width: 300px;
+                    text-align: center;
+                }
+                .name {
+                    font-size: 22px;
+                }
+                .date, .operation-wrapper {
+                    font-size: 20px;
+                }
+                .operation-wrapper {
+                    color: #3975ff;
+                    display: flex;
+                    align-items: center;
+                    .download-btn {
+                        width: 22px;
+                        height: 22px;
+                        margin-left: 7px;
+                        cursor: pointer;
+                        .icon {
+                            width: 100%;
+                            height: 100%;
+                            color: #3975ff;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 .tabbar{
     padding: 0 150px;
@@ -126,55 +195,5 @@ const data = reactive([{}])
 }
 .tab.active .dot{
     background-color: red;
-}
-.item {
-    /* width: 377px; */
-    width: calc(calc(100% - var(--gap)*4) / 4);
-    height: 480px;
-    margin: calc(var(--gap)/2);
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 0 10px #ccc;
-}
-
-.cover {
-    flex: 1;
-    overflow: hidden;
-}
-
-.cover img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.botbox {
-    height: 120px;
-    margin: 0 30px;
-    border-top: solid 2px #666;
-    display: flex;
-    align-items: center;
-    font-size: 20px;
-    justify-content: space-evenly;
-}
-
-.txtbar {
-    width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    text-align: center;
-}
-
-.btn {
-    color: white;
-    padding: 4px 0;
-    width: 100px;
-    text-align: center;
-    border-radius: 8000px;
-    cursor: pointer;
-    user-select: none;
-    background-color: #ff1315;
 }
 </style>
